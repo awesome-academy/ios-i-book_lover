@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		515E8CB0B4089796B5A4F3A5 /* Pods_ios_i_book_lover.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2DAFF0A91AE226FF598E14D /* Pods_ios_i_book_lover.framework */; };
 		976C5F1122549C6100104CDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976C5F1022549C6100104CDA /* AppDelegate.swift */; };
-		976C5F1322549C6100104CDA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976C5F1222549C6100104CDA /* ViewController.swift */; };
 		976C5F1622549C6100104CDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 976C5F1422549C6100104CDA /* Main.storyboard */; };
 		976C5F1922549C6100104CDA /* ios_i_book_lover.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 976C5F1722549C6100104CDA /* ios_i_book_lover.xcdatamodeld */; };
 		976C5F1B22549C6200104CDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 976C5F1A22549C6200104CDA /* Assets.xcassets */; };
 		976C5F1E22549C6200104CDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 976C5F1C22549C6200104CDA /* LaunchScreen.storyboard */; };
 		976C5F352254A14500104CDA /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976C5F342254A14500104CDA /* Storyboards.swift */; };
+		976C5F3C225594FC00104CDA /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 976C5F3B225594FC00104CDA /* Home.storyboard */; };
+		976C5F3E2255950C00104CDA /* Explore.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 976C5F3D2255950C00104CDA /* Explore.storyboard */; };
+		976C5F402255951C00104CDA /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 976C5F3F2255951C00104CDA /* Profile.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,13 +24,15 @@
 		914EF4461067B614CF91038C /* Pods-ios-i-book-lover.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-i-book-lover.release.xcconfig"; path = "Target Support Files/Pods-ios-i-book-lover/Pods-ios-i-book-lover.release.xcconfig"; sourceTree = "<group>"; };
 		976C5F0D22549C6100104CDA /* ios-i-book-lover.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-i-book-lover.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		976C5F1022549C6100104CDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		976C5F1222549C6100104CDA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		976C5F1522549C6100104CDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		976C5F1822549C6100104CDA /* ios_i_book_lover.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ios_i_book_lover.xcdatamodel; sourceTree = "<group>"; };
 		976C5F1A22549C6200104CDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		976C5F1D22549C6200104CDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		976C5F1F22549C6200104CDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		976C5F342254A14500104CDA /* Storyboards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
+		976C5F3B225594FC00104CDA /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Home.storyboard; path = ../../../../../../Downloads/demo_parseJson/demo_parseJson/Home.storyboard; sourceTree = "<group>"; };
+		976C5F3D2255950C00104CDA /* Explore.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Explore.storyboard; path = ../../../../../../Downloads/demo_parseJson/demo_parseJson/Explore.storyboard; sourceTree = "<group>"; };
+		976C5F3F2255951C00104CDA /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Profile.storyboard; path = ../../../../../../Downloads/demo_parseJson/demo_parseJson/Profile.storyboard; sourceTree = "<group>"; };
 		B2DAFF0A91AE226FF598E14D /* Pods_ios_i_book_lover.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_i_book_lover.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -161,7 +165,6 @@
 			children = (
 				976C5F332254A0E000104CDA /* Storyboard */,
 				976C5F3222549DE300104CDA /* LaunchingScreen */,
-				976C5F1222549C6100104CDA /* ViewController.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -193,6 +196,9 @@
 			children = (
 				976C5F1422549C6100104CDA /* Main.storyboard */,
 				976C5F342254A14500104CDA /* Storyboards.swift */,
+				976C5F3B225594FC00104CDA /* Home.storyboard */,
+				976C5F3D2255950C00104CDA /* Explore.storyboard */,
+				976C5F3F2255951C00104CDA /* Profile.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -267,9 +273,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				976C5F402255951C00104CDA /* Profile.storyboard in Resources */,
 				976C5F1E22549C6200104CDA /* LaunchScreen.storyboard in Resources */,
 				976C5F1B22549C6200104CDA /* Assets.xcassets in Resources */,
+				976C5F3E2255950C00104CDA /* Explore.storyboard in Resources */,
 				976C5F1622549C6100104CDA /* Main.storyboard in Resources */,
+				976C5F3C225594FC00104CDA /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,7 +358,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				976C5F352254A14500104CDA /* Storyboards.swift in Sources */,
-				976C5F1322549C6100104CDA /* ViewController.swift in Sources */,
 				976C5F1922549C6100104CDA /* ios_i_book_lover.xcdatamodeld in Sources */,
 				976C5F1122549C6100104CDA /* AppDelegate.swift in Sources */,
 			);
