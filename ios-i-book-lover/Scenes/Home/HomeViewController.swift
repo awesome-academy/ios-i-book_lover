@@ -7,11 +7,16 @@
 //
 
 import UIKit
+import AlamofireObjectMapper
+import Alamofire
+import SWXMLHash
+import XMLMapper
+import ObjectMapper
 
 final class HomeViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-    }
-    
+        }
 }

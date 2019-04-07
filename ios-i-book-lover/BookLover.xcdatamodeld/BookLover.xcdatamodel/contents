@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="17G65" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AuthorEnity" representedClassName="AuthorEnity" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imageURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="link" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="books" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BookEnity" inverseName="author" inverseEntity="BookEnity" syncable="YES"/>
+    </entity>
+    <entity name="BookEnity" representedClassName="BookEnity" syncable="YES" codeGenerationType="class">
+        <attribute name="averageRating" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="descriptions" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="genre" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imageUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isbn" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="link" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="numOfPages" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="publicationDay" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="publicationMonth" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="publicationYear" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ratingsCount" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="author" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AuthorEnity" inverseName="books" inverseEntity="AuthorEnity" syncable="YES"/>
+        <relationship name="interested" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Bookshelf" inverseName="interested" inverseEntity="Bookshelf" syncable="YES"/>
+        <relationship name="read" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Bookshelf" inverseName="read" inverseEntity="Bookshelf" syncable="YES"/>
+        <relationship name="reading" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Bookshelf" inverseName="reading" inverseEntity="Bookshelf" syncable="YES"/>
+    </entity>
+    <entity name="Bookshelf" representedClassName="Bookshelf" syncable="YES" codeGenerationType="class">
+        <relationship name="interested" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="BookEnity" inverseName="interested" inverseEntity="BookEnity" syncable="YES"/>
+        <relationship name="read" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="BookEnity" inverseName="read" inverseEntity="BookEnity" syncable="YES"/>
+        <relationship name="reading" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="BookEnity" inverseName="reading" inverseEntity="BookEnity" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="bookShelf" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="class">
+        <attribute name="genres" optional="YES" attributeType="Transformable" customClassName="[String]" syncable="YES"/>
+        <relationship name="bookShelf" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Bookshelf" inverseName="user" inverseEntity="Bookshelf" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="BookEnity" positionX="-131.4140625" positionY="392.625" width="128" height="300"/>
+        <element name="Bookshelf" positionX="-456.9375" positionY="224.30078125" width="128" height="105"/>
+        <element name="User" positionX="49.05859375" positionY="240.6484375" width="128" height="75"/>
+        <element name="AuthorEnity" positionX="-243" positionY="387" width="128" height="120"/>
+    </elements>
+</model>
