@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Rdv-7L-ypD" customClass="BookCell" customModule="BookLover" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="140" height="190"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tHq-U1-ggk">
+                    <rect key="frame" x="0.0" y="0.0" width="140" height="120"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="120" id="PAp-rd-Qkh"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JYH-a9-awk" customClass="RatingView" customModule="BookLover" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="125" width="140" height="20"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="Gez-bt-qwT"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="author" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFv-yz-Leo">
+                    <rect key="frame" x="5" y="150" width="130" height="13.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fgn-3M-HIS">
+                    <rect key="frame" x="5" y="168.5" width="130" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="dFv-yz-Leo" firstAttribute="centerX" secondItem="Rdv-7L-ypD" secondAttribute="centerX" id="110-yV-qhm"/>
+                <constraint firstItem="tHq-U1-ggk" firstAttribute="top" secondItem="wK3-xi-GPL" secondAttribute="top" id="6Ug-HA-UNO"/>
+                <constraint firstItem="JYH-a9-awk" firstAttribute="leading" secondItem="wK3-xi-GPL" secondAttribute="leading" id="CYJ-3B-Zn8"/>
+                <constraint firstItem="Fgn-3M-HIS" firstAttribute="centerX" secondItem="Rdv-7L-ypD" secondAttribute="centerX" id="Cpk-7t-1hq"/>
+                <constraint firstItem="JYH-a9-awk" firstAttribute="top" secondItem="tHq-U1-ggk" secondAttribute="bottom" constant="5" id="GBa-qu-rxm"/>
+                <constraint firstItem="Fgn-3M-HIS" firstAttribute="top" secondItem="dFv-yz-Leo" secondAttribute="bottom" constant="5" id="K67-jc-r9b"/>
+                <constraint firstItem="dFv-yz-Leo" firstAttribute="top" secondItem="JYH-a9-awk" secondAttribute="bottom" constant="5" id="UZg-4H-u6Y"/>
+                <constraint firstItem="wK3-xi-GPL" firstAttribute="trailing" secondItem="tHq-U1-ggk" secondAttribute="trailing" id="Xyf-ea-uHa"/>
+                <constraint firstItem="wK3-xi-GPL" firstAttribute="bottom" secondItem="Fgn-3M-HIS" secondAttribute="bottom" constant="3.5" id="Ynf-f1-mn6"/>
+                <constraint firstItem="wK3-xi-GPL" firstAttribute="trailing" secondItem="JYH-a9-awk" secondAttribute="trailing" id="hZM-ib-gAt"/>
+                <constraint firstItem="wK3-xi-GPL" firstAttribute="trailing" secondItem="Fgn-3M-HIS" secondAttribute="trailing" constant="5" id="mhB-zp-ngp"/>
+                <constraint firstItem="tHq-U1-ggk" firstAttribute="leading" secondItem="wK3-xi-GPL" secondAttribute="leading" id="xCc-Gl-i7Q"/>
+                <constraint firstItem="wK3-xi-GPL" firstAttribute="trailing" secondItem="dFv-yz-Leo" secondAttribute="trailing" constant="5" id="zGK-Bt-gNb"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="wK3-xi-GPL"/>
+            <connections>
+                <outlet property="ratingView" destination="JYH-a9-awk" id="ivs-sh-IwY"/>
+            </connections>
+            <point key="canvasLocation" x="168" y="108.84557721139431"/>
+        </view>
+    </objects>
+</document>
