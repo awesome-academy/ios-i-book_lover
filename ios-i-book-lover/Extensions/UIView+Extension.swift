@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-extension UIView {    
+extension UIView {
     public static var nib: UINib {
         return className.nib
     }

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 enum Constants {
     static let appName = "Book Lover"
@@ -15,4 +16,10 @@ enum Constants {
                          "Cookbooks", "Fantasy", "Fiction", "History", "Horror",
                          "Non-fiction", "Psychology", "Science", "Self help", "Travel",
                          "Romance", "Young-adult"]
+    static let heightGenreWelcome: CGFloat = 32
+    static let preDisplayItems = 6
+    static let heightGenreCell: CGFloat = 67
+    static let heightBookCell: CGFloat = 190
+    static let weightBookCell: CGFloat = 130
+    static let fontSize: CGFloat = 20
 }

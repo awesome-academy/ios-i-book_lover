@@ -1,5 +1,5 @@
 //
-//  TabBarController.swift
+//  BookDetailViewController.swift
 //  BookLover
 //
 //  Created by nguyen.nam.khanh on 4/10/19.
@@ -7,14 +7,15 @@
 //
 
 import UIKit
+import Then
 import Reusable
 
-final class TabBarController: UITabBarController {
+final class BookDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+
     }
 }
-
-extension TabBarController: StoryboardSceneBased {
-    static let sceneStoryboard = Storyboards.main
+extension BookDetailViewController: StoryboardSceneBased {
+    static let sceneStoryboard = Storyboards.home
 }
