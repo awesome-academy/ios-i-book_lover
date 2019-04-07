@@ -22,7 +22,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="bQR-oe-Eeg">
             <objects>
-                <tabBarController id="ZYr-rK-u1q" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" id="ZYr-rK-u1q" customClass="TabBarController" customModule="BookLover" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ATv-9V-gYi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

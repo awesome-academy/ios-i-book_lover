@@ -33,7 +33,7 @@
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="bookShelf" inverseEntity="User" syncable="YES"/>
     </entity>
     <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="class">
-        <attribute name="genres" optional="YES" attributeType="Transformable" customClassName="[String]" syncable="YES"/>
+        <attribute name="genres" optional="YES" attributeType="Transformable" customClassName="[Int]" syncable="YES"/>
         <relationship name="bookShelf" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Bookshelf" inverseName="user" inverseEntity="Bookshelf" syncable="YES"/>
     </entity>
     <elements>

@@ -16,13 +16,38 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        if let vc = Storyboards.home.instantiateViewController(withIdentifier: WelcomeViewController.className)
-            as? WelcomeViewController {
-            window?.rootViewController = vc
+        if checkRecordExists() {
+            if let vc = Storyboards.main.instantiateViewController(withIdentifier: TabBarController.className)
+                as? TabBarController {
+                window?.rootViewController = vc
+            }
+        } else {
+            if let vc = Storyboards.home.instantiateViewController(withIdentifier: WelcomeViewController.className)
+                as? WelcomeViewController {
+                window?.rootViewController = vc
+            }
         }
         return true
     }
 
+    func checkRecordExists() -> Bool {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return false
+        }
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
+        fetchRequest.includesSubentities = false
+        
+        var entitiesCount = 0
+        
+        do {
+            entitiesCount = try managedContext.count(for: fetchRequest)
+        } catch {
+            print("error executing fetch request: \(error)")
+        }
+        
+        return entitiesCount > 0
+    }
     func applicationWillResignActive(_ application: UIApplication) {
     }
 
@@ -39,10 +64,8 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         self.saveContext()
     }
 
-    // MARK: - Core Data stack
-
     lazy var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "ios_i_book_lover")
+        let container = NSPersistentContainer(name: "BookLover")
         container.loadPersistentStores(completionHandler: { (_, error) in
             if let error = error as NSError? {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
@@ -50,8 +73,6 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         })
         return container
     }()
-
-    // MARK: - Core Data Saving support
 
     func saveContext () {
         let context = persistentContainer.viewContext

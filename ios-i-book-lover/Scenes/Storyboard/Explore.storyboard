@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Explore View Controller-->
+        <!--Explore-->
         <scene sceneID="zeg-gF-sda">
             <objects>
                 <viewController storyboardIdentifier="ExploreViewController" id="oBb-Dt-hKz" customClass="ExploreViewController" customModule="BookLover" sceneMemberID="viewController">
@@ -20,7 +20,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="akj-CC-qse"/>
                     </view>
-                    <navigationItem key="navigationItem" id="nT8-pR-szM"/>
+                    <navigationItem key="navigationItem" title="Explore" id="nT8-pR-szM"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LZ3-8S-qzT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
