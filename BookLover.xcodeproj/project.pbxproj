@@ -28,6 +28,12 @@
 		976C5F862259D93C00104CDA /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976C5F852259D93C00104CDA /* Text.swift */; };
 		976C5F882259DE9400104CDA /* DetailBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976C5F872259DE9400104CDA /* DetailBook.swift */; };
 		976C5F8A2259E0F500104CDA /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976C5F892259E0F500104CDA /* Author.swift */; };
+		976C5F8D225A0FC400104CDA /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976C5F8C225A0FC400104CDA /* WelcomeViewController.swift */; };
+		976C5F91225A190700104CDA /* WelcomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976C5F90225A190700104CDA /* WelcomeCell.swift */; };
+		976C5F93225A1A2800104CDA /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976C5F92225A1A2800104CDA /* UIColor+Extension.swift */; };
+		976C5F97225A42D900104CDA /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976C5F96225A42D900104CDA /* UIView+Extension.swift */; };
+		976C5F99225A44FC00104CDA /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976C5F98225A44FC00104CDA /* String+Extension.swift */; };
+		976C5F9B225A506500104CDA /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976C5F9A225A506500104CDA /* UIViewController+Extension.swift */; };
 		D8D8A434CDE658E9B0F96C63 /* Pods_BookLover.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67A5AF1DA3EAA298F4297B7F /* Pods_BookLover.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +64,12 @@
 		976C5F852259D93C00104CDA /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
 		976C5F872259DE9400104CDA /* DetailBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBook.swift; sourceTree = "<group>"; };
 		976C5F892259E0F500104CDA /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
+		976C5F8C225A0FC400104CDA /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		976C5F90225A190700104CDA /* WelcomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCell.swift; sourceTree = "<group>"; };
+		976C5F92225A1A2800104CDA /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		976C5F96225A42D900104CDA /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		976C5F98225A44FC00104CDA /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		976C5F9A225A506500104CDA /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		B2DAFF0A91AE226FF598E14D /* Pods_ios_i_book_lover.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_i_book_lover.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -170,6 +182,10 @@
 		976C5F2C22549D0D00104CDA /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				976C5F92225A1A2800104CDA /* UIColor+Extension.swift */,
+				976C5F96225A42D900104CDA /* UIView+Extension.swift */,
+				976C5F98225A44FC00104CDA /* String+Extension.swift */,
+				976C5F9A225A506500104CDA /* UIViewController+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -192,6 +208,8 @@
 		976C5F2F22549D4B00104CDA /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				976C5F8E225A10AC00104CDA /* Cell */,
+				976C5F8B225A0F9F00104CDA /* Welcome */,
 				976C5F622255B69200104CDA /* TabBar */,
 				976C5F5B2255B60F00104CDA /* Explore */,
 				976C5F5A2255B60700104CDA /* Home */,
@@ -295,6 +313,30 @@
 				976C5F6C2256F52F00104CDA /* DetailAuthor.swift */,
 			);
 			path = Author;
+			sourceTree = "<group>";
+		};
+		976C5F8B225A0F9F00104CDA /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				976C5F8C225A0FC400104CDA /* WelcomeViewController.swift */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		976C5F8E225A10AC00104CDA /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				976C5F8F225A18C200104CDA /* Welcome */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		976C5F8F225A18C200104CDA /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				976C5F90225A190700104CDA /* WelcomeCell.swift */,
+			);
+			path = Welcome;
 			sourceTree = "<group>";
 		};
 		B778718EF6273DCA93CA8076 /* Pods */ = {
@@ -458,18 +500,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				976C5F822259D84000104CDA /* BookList.swift in Sources */,
+				976C5F8D225A0FC400104CDA /* WelcomeViewController.swift in Sources */,
 				976C5F882259DE9400104CDA /* DetailBook.swift in Sources */,
+				976C5F93225A1A2800104CDA /* UIColor+Extension.swift in Sources */,
 				976C5F5F2255B66500104CDA /* HomeViewController.swift in Sources */,
 				976C5F352254A14500104CDA /* Storyboards.swift in Sources */,
 				976C5F612255B67000104CDA /* ExploreViewController.swift in Sources */,
 				976C5F6D2256F52F00104CDA /* DetailAuthor.swift in Sources */,
+				976C5F99225A44FC00104CDA /* String+Extension.swift in Sources */,
 				976C5F642255B69E00104CDA /* TabBarViewController.swift in Sources */,
 				976C5F7A22572B6B00104CDA /* Configuration.swift in Sources */,
 				976C5F6B2256F21000104CDA /* Book.swift in Sources */,
 				976C5F8A2259E0F500104CDA /* Author.swift in Sources */,
+				976C5F97225A42D900104CDA /* UIView+Extension.swift in Sources */,
 				976C5F862259D93C00104CDA /* Text.swift in Sources */,
 				976C5F7E22573EE100104CDA /* BookLover.xcdatamodeld in Sources */,
+				976C5F91225A190700104CDA /* WelcomeCell.swift in Sources */,
 				976C5F5D2255B64200104CDA /* ProfileViewController.swift in Sources */,
+				976C5F9B225A506500104CDA /* UIViewController+Extension.swift in Sources */,
 				976C5F1122549C6100104CDA /* AppDelegate.swift in Sources */,
 				976C5F692255C36700104CDA /* Constants.swift in Sources */,
 			);
