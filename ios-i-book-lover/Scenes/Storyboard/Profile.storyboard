@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Profile View Controller-->
+        <!--Profile-->
         <scene sceneID="nU8-uB-KsZ">
             <objects>
                 <viewController storyboardIdentifier="ProfileViewController" id="jCF-Qe-IpW" customClass="ProfileViewController" customModule="BookLover" sceneMemberID="viewController">
@@ -20,7 +20,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="56x-YS-B6H"/>
                     </view>
-                    <navigationItem key="navigationItem" id="XA2-YL-Jw6"/>
+                    <navigationItem key="navigationItem" title="Profile" id="XA2-YL-Jw6"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OeV-mz-dTv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

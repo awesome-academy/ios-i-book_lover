@@ -11,6 +11,9 @@ import UIKit
 
 extension UIColor {
     public class var mainColor: UIColor {
-      return UIColor(red: 135 / 255, green: 163 / 255, blue: 242 / 255, alpha: 1)
+        return UIColor(red: 135 / 255, green: 163 / 255, blue: 242 / 255, alpha: 1)
+    }
+    public class var basicColor: UIColor {
+        return UIColor(red: 224 / 255, green: 224 / 255, blue: 224 / 255, alpha: 1)
     }
 }
