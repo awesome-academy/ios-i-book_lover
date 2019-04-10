@@ -8,6 +8,7 @@
 
 import UIKit
 import Then
+import Reusable
 
 final class GenreCell: UICollectionViewCell {
     @IBOutlet weak var genreLabel: UILabel!
@@ -19,4 +20,6 @@ final class GenreCell: UICollectionViewCell {
             layer.cornerRadius = 10
         }
     }
+}
+extension GenreCell: NibReusable {    
 }

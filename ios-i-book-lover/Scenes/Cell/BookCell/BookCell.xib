@@ -61,9 +61,12 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="wK3-xi-GPL"/>
             <connections>
-                <outlet property="ratingView" destination="JYH-a9-awk" id="ivs-sh-IwY"/>
+                <outlet property="authorLabel" destination="dFv-yz-Leo" id="MBH-Gy-Kw1"/>
+                <outlet property="bookImageView" destination="tHq-U1-ggk" id="BVz-ji-N9r"/>
+                <outlet property="ratingView" destination="JYH-a9-awk" id="xZe-BQ-rMB"/>
+                <outlet property="titleLabel" destination="Fgn-3M-HIS" id="yeG-r7-AdO"/>
             </connections>
-            <point key="canvasLocation" x="168" y="108.84557721139431"/>
+            <point key="canvasLocation" x="168" y="109"/>
         </view>
     </objects>
 </document>

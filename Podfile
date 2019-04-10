@@ -10,6 +10,7 @@ pod 'SWXMLHash', '~> 4.7.0'
 pod 'SwiftLint'
 pod 'Then'
 pod 'XMLMapper'
+pod 'Reusable'
 
   # Pods for BookLover
 

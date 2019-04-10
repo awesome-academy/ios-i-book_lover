@@ -10,6 +10,7 @@ import UIKit
 import Then
 import CoreData
 import Foundation
+import Reusable
 
 final class WelcomeViewController: UIViewController {
     @IBOutlet private weak var collectionView: UICollectionView!
@@ -34,9 +35,7 @@ final class WelcomeViewController: UIViewController {
             $0.addGestureRecognizer(tapGesture)
         }
         collectionView.do {
-            $0.delegate = self
-            $0.dataSource = self
-            $0.allowsMultipleSelection = true
+            $0.register(cellType: WelcomeCell.self)
         }
     }
     
@@ -57,10 +56,8 @@ final class WelcomeViewController: UIViewController {
         user.setValue(ownGenres, forKey: "genres")
         do {
             try managedContext.save()
-            if let vc = Storyboards.main.instantiateViewController(withIdentifier: TabBarController.className)
-                as? TabBarController {
-                show(vc, sender: nil)
-            }
+            let vc = TabBarController.instantiate()
+            show(vc, sender: nil)
         } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
         }
@@ -103,10 +100,7 @@ extension WelcomeViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: WelcomeCell.className, for: indexPath)
-            as? WelcomeCell else {
-                return UICollectionViewCell()
-        }
+        let cell = collectionView.dequeueReusableCell(for: indexPath) as WelcomeCell
         cell.genreLabel.text = genres[indexPath.row]
         return cell
     }
@@ -115,8 +109,8 @@ extension WelcomeViewController: UICollectionViewDataSource {
 extension WelcomeViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let title = genres[indexPath.item]
-        let font = UIFont.systemFont(ofSize: 20)
-        let width = title.width(withConstrainedHeight: 32, font: font)
-        return CGSize(width: width + 20, height: 32)
+        let font = UIFont.systemFont(ofSize: Constants.fontSize)
+        let width = title.width(withConstrainedHeight: Constants.heightGenreWelcome, font: font)
+        return CGSize(width: width + 20, height: Constants.heightGenreWelcome)
     }
 }

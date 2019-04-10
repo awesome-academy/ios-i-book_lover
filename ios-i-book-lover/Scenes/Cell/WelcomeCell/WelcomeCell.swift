@@ -8,6 +8,7 @@
 
 import UIKit
 import Then
+import Reusable
 
 final class WelcomeCell: UICollectionViewCell {
     @IBOutlet weak var genreLabel: UILabel!
@@ -15,7 +16,7 @@ final class WelcomeCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
 
-        genreLabel.do {_ in 
+        genreLabel.do { _ in 
             layer.masksToBounds = true
             layer.cornerRadius = 6
             layer.borderColor = UIColor.mainColor.cgColor
@@ -34,4 +35,7 @@ final class WelcomeCell: UICollectionViewCell {
             }
         }
     }
+}
+
+extension WelcomeCell: Reusable {    
 }

@@ -86,15 +86,24 @@
                 <constraint firstItem="k1t-1m-W1b" firstAttribute="centerY" secondItem="VTf-UI-lDO" secondAttribute="centerY" id="E6U-Wl-L5H"/>
                 <constraint firstItem="m2k-YQ-HdQ" firstAttribute="centerY" secondItem="LFh-Nh-puY" secondAttribute="centerY" id="EpC-QM-aSd"/>
                 <constraint firstItem="VTf-UI-lDO" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="FSd-Ca-caN"/>
+                <constraint firstItem="05p-VQ-4kH" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="SR3-DV-eDp"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="2YT-3f-eqH" secondAttribute="trailing" id="iSS-mu-pKN"/>
                 <constraint firstItem="k1t-1m-W1b" firstAttribute="leading" secondItem="VTf-UI-lDO" secondAttribute="trailing" constant="4" id="llv-wI-0U1"/>
                 <constraint firstItem="m2k-YQ-HdQ" firstAttribute="leading" secondItem="LFh-Nh-puY" secondAttribute="trailing" constant="4" id="oOO-kt-gjk"/>
                 <constraint firstItem="VTf-UI-lDO" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="pR9-SI-dgd"/>
                 <constraint firstItem="LFh-Nh-puY" firstAttribute="centerY" secondItem="k1t-1m-W1b" secondAttribute="centerY" id="rlH-qN-eDi"/>
                 <constraint firstItem="LFh-Nh-puY" firstAttribute="leading" secondItem="k1t-1m-W1b" secondAttribute="trailing" constant="4" id="s2B-21-bny"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="05p-VQ-4kH" secondAttribute="trailing" id="ww5-V5-Mym"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="star1" destination="VTf-UI-lDO" id="inj-FG-zVS"/>
+                <outlet property="star2" destination="k1t-1m-W1b" id="hFY-vB-DcM"/>
+                <outlet property="star3" destination="LFh-Nh-puY" id="hvb-Vu-gyY"/>
+                <outlet property="star4" destination="m2k-YQ-HdQ" id="7fi-59-rEI"/>
+                <outlet property="star5" destination="2YT-3f-eqH" id="pL9-Id-diD"/>
+            </connections>
             <point key="canvasLocation" x="73.599999999999994" y="224.88755622188907"/>
         </view>
     </objects>

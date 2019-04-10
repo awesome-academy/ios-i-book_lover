@@ -14,7 +14,6 @@ final class RatingView: UIView {
     @IBOutlet private weak var star3: UIButton!
     @IBOutlet private weak var star4: UIButton!
     @IBOutlet private weak var star5: UIButton!
-    
     var view: UIView!
     
     override init(frame: CGRect) {
