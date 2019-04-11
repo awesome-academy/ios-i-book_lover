@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Then
 
 final class RatingView: UIView {
     @IBOutlet private weak var star1: UIButton!
@@ -77,7 +78,7 @@ final class RatingView: UIView {
         buttons.append(star4)
         buttons.append(star5)
         let number = Int(floor(rate))
-        
+
         if rate.truncatingRemainder(dividingBy: 10) == 0 {
             for i in 0..<number {
                 buttons[i].isSelected = true
@@ -87,6 +88,7 @@ final class RatingView: UIView {
             }
         } else {
             for i in 0..<number {
+                buttons[i].setImage(UIImage(named: "ic_star"), for: .selected)
                 buttons[i].isSelected = true
             }
             if number < 5 {

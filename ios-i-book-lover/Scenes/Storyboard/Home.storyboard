@@ -125,7 +125,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="587"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LKa-N5-lj4">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="599.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="659.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Genres" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWZ-dF-chW">
                                                 <rect key="frame" x="16" y="16" width="98.5" height="25.5"/>
@@ -140,7 +140,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4b6-hU-QH7">
-                                                <rect key="frame" x="16" y="375.5" width="42" height="26"/>
+                                                <rect key="frame" x="16" y="405.5" width="42" height="26"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -151,7 +151,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="70" id="JLn-nz-VNB"/>
                                                 </constraints>
-                                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Gxu-J7-RJU">
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Gxu-J7-RJU">
                                                     <size key="itemSize" width="91" height="67"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -159,7 +159,7 @@
                                                 </collectionViewFlowLayout>
                                                 <cells>
                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GenreCell" id="PNT-2Y-A0X" customClass="GenreCell" customModule="BookLover">
-                                                        <rect key="frame" x="0.0" y="0.0" width="91" height="67"/>
+                                                        <rect key="frame" x="0.0" y="1.5" width="91" height="67"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                                             <rect key="frame" x="0.0" y="0.0" width="91" height="67"/>
@@ -187,12 +187,12 @@
                                                 </cells>
                                             </collectionView>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gIe-Zg-tLs">
-                                                <rect key="frame" x="0.0" y="169.5" width="375" height="190"/>
+                                                <rect key="frame" x="0.0" y="169.5" width="375" height="220"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="190" id="RJW-Ob-a2v"/>
+                                                    <constraint firstAttribute="height" constant="220" id="RJW-Ob-a2v"/>
                                                 </constraints>
-                                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VjI-t6-m5P">
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VjI-t6-m5P">
                                                     <size key="itemSize" width="129" height="192"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -201,12 +201,12 @@
                                                 <cells/>
                                             </collectionView>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5p1-uN-jBG">
-                                                <rect key="frame" x="0.0" y="409.5" width="375" height="190"/>
+                                                <rect key="frame" x="0.0" y="439.5" width="375" height="220"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="190" id="1rM-9a-JRv"/>
+                                                    <constraint firstAttribute="height" constant="220" id="1rM-9a-JRv"/>
                                                 </constraints>
-                                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nXn-iK-ocv">
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nXn-iK-ocv">
                                                     <size key="itemSize" width="124" height="166"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -233,7 +233,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qaC-eb-C6H">
-                                                <rect key="frame" x="303" y="373.5" width="64" height="30"/>
+                                                <rect key="frame" x="303" y="403.5" width="64" height="30"/>
                                                 <state key="normal" title="see more">
                                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -299,7 +299,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gy7-LK-gsi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1512.8" y="-208.24587706146929"/>
+            <point key="canvasLocation" x="1512.8" y="-208.69565217391306"/>
         </scene>
         <!--Genres-->
         <scene sceneID="vTR-pc-6hi">

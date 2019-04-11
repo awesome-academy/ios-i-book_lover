@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RatingView" customModule="BookLover" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner">
             <connections>
                 <outlet property="star1" destination="VTf-UI-lDO" id="R66-zO-T16"/>
                 <outlet property="star2" destination="k1t-1m-W1b" id="ZPR-4N-16y"/>
@@ -25,7 +25,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VTf-UI-lDO">
-                    <rect key="frame" x="0.0" y="10" width="14" height="14"/>
+                    <rect key="frame" x="9" y="10" width="14" height="14"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="14" id="82q-b2-YGS"/>
                         <constraint firstAttribute="width" constant="14" id="isa-5Q-rMa"/>
@@ -36,7 +36,7 @@
                     <state key="highlighted" image="ic_half_star"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k1t-1m-W1b">
-                    <rect key="frame" x="18" y="10" width="14" height="14"/>
+                    <rect key="frame" x="27" y="10" width="14" height="14"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="14" id="RBC-BZ-AtM"/>
                         <constraint firstAttribute="width" constant="14" id="iyy-Cc-Ox4"/>
@@ -47,7 +47,7 @@
                     <state key="highlighted" image="ic_half_star"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LFh-Nh-puY">
-                    <rect key="frame" x="36" y="10" width="14" height="14"/>
+                    <rect key="frame" x="45" y="10" width="14" height="14"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="14" id="Prq-Yg-l8F"/>
                         <constraint firstAttribute="width" constant="14" id="dMs-ag-HrQ"/>
@@ -58,7 +58,7 @@
                     <state key="highlighted" image="ic_half_star" backgroundImage="ic_half_star"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2k-YQ-HdQ">
-                    <rect key="frame" x="54" y="10" width="14" height="14"/>
+                    <rect key="frame" x="63" y="10" width="14" height="14"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="14" id="gq9-tb-Khc"/>
                         <constraint firstAttribute="height" constant="14" id="jd4-Iw-zaU"/>
@@ -66,17 +66,17 @@
                     <state key="normal" image="ic_star_base"/>
                     <state key="disabled" image="ic_half_star"/>
                     <state key="selected" image="ic_star"/>
-                    <state key="highlighted" image="ic_half_star" backgroundImage="ic_half_star"/>
+                    <state key="highlighted" image="ic_half_star"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2YT-3f-eqH">
-                    <rect key="frame" x="72" y="10" width="14" height="14"/>
+                    <rect key="frame" x="81" y="10" width="14" height="14"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="14" id="hk6-Q3-zYd"/>
                         <constraint firstAttribute="height" constant="14" id="jsA-mp-GBQ"/>
                     </constraints>
                     <state key="normal" image="ic_star_base"/>
                     <state key="selected" image="ic_star"/>
-                    <state key="highlighted" image="ic_half_star" backgroundImage="ic_half_star"/>
+                    <state key="highlighted" image="ic_half_star"/>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -85,25 +85,18 @@
                 <constraint firstItem="2YT-3f-eqH" firstAttribute="centerY" secondItem="m2k-YQ-HdQ" secondAttribute="centerY" id="8aS-T3-Khd"/>
                 <constraint firstItem="k1t-1m-W1b" firstAttribute="centerY" secondItem="VTf-UI-lDO" secondAttribute="centerY" id="E6U-Wl-L5H"/>
                 <constraint firstItem="m2k-YQ-HdQ" firstAttribute="centerY" secondItem="LFh-Nh-puY" secondAttribute="centerY" id="EpC-QM-aSd"/>
-                <constraint firstItem="VTf-UI-lDO" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="FSd-Ca-caN"/>
-                <constraint firstItem="05p-VQ-4kH" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="SR3-DV-eDp"/>
+                <constraint firstItem="VTf-UI-lDO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vUN-kp-3ea" secondAttribute="leading" id="FSd-Ca-caN"/>
+                <constraint firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="SR3-DV-eDp"/>
+                <constraint firstItem="LFh-Nh-puY" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="UHJ-Bs-cWW"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="2YT-3f-eqH" secondAttribute="trailing" id="iSS-mu-pKN"/>
                 <constraint firstItem="k1t-1m-W1b" firstAttribute="leading" secondItem="VTf-UI-lDO" secondAttribute="trailing" constant="4" id="llv-wI-0U1"/>
                 <constraint firstItem="m2k-YQ-HdQ" firstAttribute="leading" secondItem="LFh-Nh-puY" secondAttribute="trailing" constant="4" id="oOO-kt-gjk"/>
                 <constraint firstItem="VTf-UI-lDO" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="pR9-SI-dgd"/>
                 <constraint firstItem="LFh-Nh-puY" firstAttribute="centerY" secondItem="k1t-1m-W1b" secondAttribute="centerY" id="rlH-qN-eDi"/>
                 <constraint firstItem="LFh-Nh-puY" firstAttribute="leading" secondItem="k1t-1m-W1b" secondAttribute="trailing" constant="4" id="s2B-21-bny"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="05p-VQ-4kH" secondAttribute="trailing" id="ww5-V5-Mym"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <connections>
-                <outlet property="star1" destination="VTf-UI-lDO" id="inj-FG-zVS"/>
-                <outlet property="star2" destination="k1t-1m-W1b" id="hFY-vB-DcM"/>
-                <outlet property="star3" destination="LFh-Nh-puY" id="hvb-Vu-gyY"/>
-                <outlet property="star4" destination="m2k-YQ-HdQ" id="7fi-59-rEI"/>
-                <outlet property="star5" destination="2YT-3f-eqH" id="pL9-Id-diD"/>
-            </connections>
             <point key="canvasLocation" x="73.599999999999994" y="224.88755622188907"/>
         </view>
     </objects>

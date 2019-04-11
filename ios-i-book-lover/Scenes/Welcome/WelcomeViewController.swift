@@ -109,8 +109,8 @@ extension WelcomeViewController: UICollectionViewDataSource {
 extension WelcomeViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let title = genres[indexPath.item]
-        let font = UIFont.systemFont(ofSize: Constants.fontSize)
-        let width = title.width(withConstrainedHeight: Constants.heightGenreWelcome, font: font)
-        return CGSize(width: width + 20, height: Constants.heightGenreWelcome)
+        let font = UIFont.systemFont(ofSize: Cells.fontSize)
+        let width = title.width(withConstrainedHeight: Cells.heightGenreWelcome, font: font)
+        return CGSize(width: width + 20, height: Cells.heightGenreWelcome)
     }
 }

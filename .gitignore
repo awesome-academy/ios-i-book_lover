@@ -46,6 +46,7 @@ Pods/
 
 #API Key
 Movie/Utils/APIKey.swift
+ios-i-book-lover/Utils/APIKey.swift
 
 # CocoaPods
 #

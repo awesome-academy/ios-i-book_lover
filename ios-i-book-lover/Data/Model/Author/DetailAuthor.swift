@@ -6,15 +6,14 @@
 //  Copyright © 2019 nguyen.nam.khanh. All rights reserved.
 //
 
-import Foundation
 import XMLMapper
 
 final class DetailAuthor: XMLMappable {
     var nodeName: String! = ""
-    var id: String?
-    var name: String?
-    var link: String?
-    var imageURL: String?
+    var id = ""
+    var name = ""
+    var link = ""
+    var imageURL = ""
     
     required init?(map: XMLMap) {
     }

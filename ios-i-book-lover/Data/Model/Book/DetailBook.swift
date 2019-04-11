@@ -6,24 +6,23 @@
 //  Copyright © 2019 nguyen.nam.khanh. All rights reserved.
 //
 
-import Foundation
 import XMLMapper
 
 final class DetailBook: XMLMappable {
     var nodeName: String! = ""
-    var id: String?
-    var title: String?
-    var isbn: String?
-    var imageUrl: String?
-    var publicationYear: String?
-    var publicationMonth: String?
-    var publicationDay: String?
-    var publisher: String?
-    var descriptions: String?
-    var ratingsCount: String?
-    var averageRating: String?
-    var numOfPages: String?
-    var link: String?
+    var id = ""
+    var title = ""
+    var isbn = ""
+    var imageUrl = ""
+    var publicationYear = ""
+    var publicationMonth = ""
+    var publicationDay = ""
+    var publisher = ""
+    var descriptions = ""
+    var ratingsCount = ""
+    var averageRating = ""
+    var numOfPages = ""
+    var link = ""
     var author: DetailAuthor?
     
     required init?(map: XMLMap) {}
