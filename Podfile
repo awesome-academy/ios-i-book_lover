@@ -11,6 +11,8 @@ pod 'SwiftLint'
 pod 'Then'
 pod 'XMLMapper'
 pod 'Reusable'
+pod 'XMLMapper/Requests'
+pod 'Kingfisher'
 
   # Pods for BookLover
 

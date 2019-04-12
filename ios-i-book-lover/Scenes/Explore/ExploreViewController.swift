@@ -13,5 +13,4 @@ final class ExploreViewController: UIViewController {
         super.viewDidLoad()
 
     }
-    
 }

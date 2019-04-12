@@ -6,16 +6,15 @@
 //  Copyright © 2019 nguyen.nam.khanh. All rights reserved.
 //
 
-import Foundation
 import XMLMapper
 
 final class Book: XMLMappable {
     var nodeName: String! = ""
     var id: Text?
-    var title: String?
-    var imageUrl: String?
+    var title = ""
+    var imageUrl = ""
     var ratingsCount: Text?
-    var averageRating: String?
+    var averageRating = ""
     var author: Author?
     
     required init?(map: XMLMap) {}

@@ -20,25 +20,34 @@ final class HomeViewController: UIViewController {
     private var genresList = [String]()
     private var popularBooksList = [Book]()
     private var newBooksList = [Book]()
+    private let bookRepository: BookRepository = BookRepositoryImpl(api: APIService.share)
+    private let isbnRepository: IsbnRepository = IsbnRepositoryImpl(api: APIService.share)
     
     override func viewDidLoad() {
         super.viewDidLoad()
             prepareUI()
-        }
-    
+    }
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         fetchOwnGenres()
+        fetchIsbnPopularBook()
+        fetchIsbnNewBook()
     }
+    
     private func prepareUI() {
         genreCollectionView.do {
             $0.delegate = self
             $0.dataSource = self
         }
         popularCollectionView.do {
+            $0.delegate = self
+            $0.dataSource = self
             $0.register(cellType: BookCell.self)
         }
         newCollectionView.do {
+            $0.delegate = self
+            $0.dataSource = self
             $0.register(cellType: BookCell.self)
         }
     }
@@ -65,14 +74,109 @@ final class HomeViewController: UIViewController {
             print("Could not fetch. \(error), \(error.userInfo)")
         }
     }
+    
+    private func fetchPopularBook(isbn: String) {
+        bookRepository.searchBooks(isbn: isbn) { [weak self] (result) in
+            guard let self = self else {
+                return
+            }
+            
+            switch result {
+            case .success(let reponse):
+                if let books = reponse?.books {
+                    for i in books {
+                        self.popularBooksList.append(i)
+                    }
+                }
+                self.popularCollectionView.reloadData()
+            case .failure(let error):
+                print(error ?? "")
+            }
+        }
+    }
+    
+    private func fetchNewBook(isbn: String) {
+        bookRepository.searchBooks(isbn: isbn) { [weak self] (result) in
+            guard let self = self else {
+                return
+            }
+            
+            switch result {
+            case .success(let reponse):
+                if let books = reponse?.books {
+                    for i in books {
+                        self.newBooksList.append(i)
+                    }
+                }
+                self.newCollectionView.reloadData()
+            case .failure(let error):
+                print(error ?? "")
+            }
+        }
+    }
+    
+    private func fetchIsbnPopularBook() {
+        view.activityStartAnimating(activityColor: .mainColor)
+        isbnRepository.searchIsbn(publishedDate: Date().getHalfYearAgo().toString()) { [weak self] (result) in
+            guard let self = self else {
+                return
+            }
+            
+            switch result {
+            case .success(let reponse):
+                if let results = reponse?.resultList {
+                    for list in results {
+                        if let list = list.ISBNList {
+                            for i in list {
+                                self.fetchPopularBook(isbn: i.ISBN)
+                            }
+                        }
+                    }
+                }
+                self.newCollectionView.reloadData()
+                self.view.activityStopAnimating()
+            case .failure(let error):
+                print(error ?? "")
+            }
+        }
+    }
+    
+    private func fetchIsbnNewBook() {
+        view.activityStartAnimating(activityColor: .mainColor)
+        isbnRepository.searchIsbn(publishedDate: Date().toString()) { [weak self] (result) in
+            guard let self = self else {
+                return
+            }
+            
+            switch result {
+            case .success(let reponse):
+                if let results = reponse?.resultList {
+                    for list in results {
+                        if let list = list.ISBNList {
+                            for i in list {
+                                self.fetchNewBook(isbn: i.ISBN)
+                            }
+                        }
+                    }
+                }
+                self.newCollectionView.reloadData()
+                self.view.activityStopAnimating()
+            case .failure(let error):
+                print(error ?? "")
+            }
+        }
+    }
+    
     @IBAction private func moreGenreAction(_ sender: Any) {
         let vc = GenresListViewController.instantiate()
         show(vc, sender: nil)
     }
+    
     @IBAction private func morePopularAction(_ sender: Any) {
         let vc = BooksListViewController.instantiate()
         show(vc, sender: nil)
     }
+    
     @IBAction private func moreNewAction(_ sender: Any) {
         let vc = BooksListViewController.instantiate()
         show(vc, sender: nil)
@@ -111,14 +215,20 @@ extension HomeViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if collectionView == popularCollectionView, collectionView == newCollectionView {
-            let cell = collectionView.dequeueReusableCell(for: indexPath) as BookCell
+        switch collectionView {
+        case popularCollectionView:
+            let cell = popularCollectionView.dequeueReusableCell(for: indexPath) as BookCell
+            cell.configCell(book: popularBooksList[indexPath.item])
+            return cell
+        case newCollectionView:
+            let cell = newCollectionView.dequeueReusableCell(for: indexPath) as BookCell
+            cell.configCell(book: newBooksList[indexPath.item])
+            return cell
+        default:
+            let cell = genreCollectionView.dequeueReusableCell(for: indexPath) as GenreCell
+            cell.genreLabel.text = genresList[indexPath.row]
             return cell
         }
-        
-        let cell = genreCollectionView.dequeueReusableCell(for: indexPath) as GenreCell
-        cell.genreLabel.text = genresList[indexPath.row]
-        return cell
     }
 }
 
@@ -128,13 +238,12 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
         var width: CGFloat = 0
         switch collectionView {
         case genreCollectionView:
-            let font = UIFont.systemFont(ofSize: Constants.fontSize)
             let title = genresList[indexPath.row]
-            height = Constants.heightGenreCell
-            width = title.width(withConstrainedHeight: height, font: font) + height / 2
-        case popularCollectionView, popularCollectionView:
-            height = Constants.heightBookCell
-            width = Constants.weightBookCell
+            height = Cells.heightGenreCell
+            width = title.width(withConstrainedHeight: height, font: UIFont.primary) + height / 2
+        case popularCollectionView, newCollectionView:
+            height = Cells.heightBookCell
+            width = Cells.weightBookCell
         default:
             break
         }

@@ -6,10 +6,14 @@
 //  Copyright © 2019 nguyen.nam.khanh. All rights reserved.
 //
 
-import Foundation
-
-enum Configuration {
-    static let key = "qyFdCI29lON4kCH3G8lQ"
-    static let BaseUrl = "https://www.goodreads.com/"
-    static let searchUrl = "search/index.xml?"
+enum Configuration {    
+    static let baseUrl = "https://www.goodreads.com/"
+    static let search = "search/index.xml?"
+    static let isbn = "book/isbn/"
+    static let searchUrl = "\(baseUrl)\(search)\(APIKey.key)"
+    static let searchUrlByIsbn = "\(baseUrl)\(isbn)"
+        
+    static let baseNYTUrl = "https://api.nytimes.com/svc/books/v3/lists.json?"
+    static let nonFictionList = "list-name=hardcover-nonfiction"
+    static let searchIsbnUrl = "\(baseNYTUrl)\(nonFictionList)&api-key=\(APIKey.NYTKey)"
 }

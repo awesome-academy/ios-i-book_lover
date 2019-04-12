@@ -6,7 +6,6 @@
 //  Copyright © 2019 nguyen.nam.khanh. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 enum Storyboards {
@@ -14,5 +13,4 @@ enum Storyboards {
     static var home = UIStoryboard(name: "Home", bundle: nil)
     static var profile = UIStoryboard(name: "Profile", bundle: nil)
     static var explore = UIStoryboard(name: "Explore", bundle: nil)
-
 }

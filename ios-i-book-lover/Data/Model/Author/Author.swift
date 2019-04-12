@@ -6,13 +6,12 @@
 //  Copyright © 2019 nguyen.nam.khanh. All rights reserved.
 //
 
-import Foundation
 import XMLMapper
 
 final class Author: XMLMappable {
     var nodeName: String! = ""
     var id: Text?
-    var name: String?
+    var name = ""
     
     required init?(map: XMLMap) {
     }
@@ -22,3 +21,4 @@ final class Author: XMLMappable {
         name <- map["name"]
     }
 }
+
