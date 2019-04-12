@@ -11,17 +11,11 @@ import Then
 import Reusable
 
 final class WelcomeCell: UICollectionViewCell {
-    @IBOutlet weak var genreLabel: UILabel!
+    @IBOutlet private weak var genreLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-
-        genreLabel.do { _ in 
-            layer.masksToBounds = true
-            layer.cornerRadius = 6
-            layer.borderColor = UIColor.mainColor.cgColor
-            layer.borderWidth = 1
-        }
+        configCell()
     }
     
     override var isSelected: Bool {
@@ -33,6 +27,19 @@ final class WelcomeCell: UICollectionViewCell {
                 genreLabel.backgroundColor = .white
                 genreLabel.textColor = .mainColor
             }
+        }
+    }
+    
+    func setContent(genreTitle: String) {
+        genreLabel.text = genreTitle
+    }
+    
+    private func configCell() {
+        genreLabel.do { _ in
+            layer.masksToBounds = true
+            layer.cornerRadius = 6
+            layer.borderColor = UIColor.mainColor.cgColor
+            layer.borderWidth = 1
         }
     }
 }

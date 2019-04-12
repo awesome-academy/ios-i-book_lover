@@ -61,6 +61,7 @@
 		97CD765522602690005D3102 /* ISBN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CD765422602690005D3102 /* ISBN.swift */; };
 		97CD765722602C32005D3102 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CD765622602C32005D3102 /* UIFont+Extension.swift */; };
 		97CD76592260308C005D3102 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CD76582260308C005D3102 /* APIKey.swift */; };
+		97CD765B22604B7C005D3102 /* GenreDisplayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CD765A22604B7C005D3102 /* GenreDisplayCell.swift */; };
 		D8D8A434CDE658E9B0F96C63 /* Pods_BookLover.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67A5AF1DA3EAA298F4297B7F /* Pods_BookLover.framework */; };
 /* End PBXBuildFile section */
 
@@ -123,6 +124,7 @@
 		97CD765422602690005D3102 /* ISBN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISBN.swift; sourceTree = "<group>"; };
 		97CD765622602C32005D3102 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 		97CD76582260308C005D3102 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		97CD765A22604B7C005D3102 /* GenreDisplayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreDisplayCell.swift; sourceTree = "<group>"; };
 		B2DAFF0A91AE226FF598E14D /* Pods_ios_i_book_lover.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_i_book_lover.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -385,6 +387,7 @@
 			isa = PBXGroup;
 			children = (
 				976C5FB7225BA2E400104CDA /* GenreCell.swift */,
+				97CD765A22604B7C005D3102 /* GenreDisplayCell.swift */,
 			);
 			path = GenreCell;
 			sourceTree = "<group>";
@@ -691,6 +694,7 @@
 				97565297225DB5F600748B5A /* TabBarController.swift in Sources */,
 				976C5F1122549C6100104CDA /* AppDelegate.swift in Sources */,
 				97CD765722602C32005D3102 /* UIFont+Extension.swift in Sources */,
+				97CD765B22604B7C005D3102 /* GenreDisplayCell.swift in Sources */,
 				976C5F692255C36700104CDA /* Constants.swift in Sources */,
 				97CD7635225F88B2005D3102 /* BaseError.swift in Sources */,
 				97CD7649225F8F0F005D3102 /* SearchBookRequest.swift in Sources */,

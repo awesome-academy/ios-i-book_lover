@@ -26,3 +26,11 @@ enum Cells {
     static let weightBookCell: CGFloat = 130
     static let fontSize: CGFloat = 20
 }
+
+enum Genres {
+    static let genreImages = ["ic_art", "ic_biography", "ic_business", "ic_chick_lit",
+                              "ic_children", "ic_christian", "ic_classic", "ic_comics",
+                              "ic_cookbook", "ic_fantasy", "ic_fiction", "ic_history", "ic_horror",
+                              "ic_nonfiction", "ic_psychology", "ic_science", "ic_self_help", "ic_travel",
+                              "ic_romantic", "ic_young"]
+}
