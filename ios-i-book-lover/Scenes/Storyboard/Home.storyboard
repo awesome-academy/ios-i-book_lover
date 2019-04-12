@@ -312,6 +312,44 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="h6b-yf-Sqo">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="separatorInset" minX="50" minY="0.0" maxX="25" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GenreDisplayCell" rowHeight="87" id="wuE-kN-bii" customClass="GenreDisplayCell" customModule="BookLover" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="87"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wuE-kN-bii" id="Tsn-Tt-SNc">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="86.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JP5-eX-mq6">
+                                                    <rect key="frame" x="15" y="12" width="45" height="45"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="45" id="WtJ-I7-YQT"/>
+                                                        <constraint firstAttribute="height" constant="45" id="fpc-J2-Tvt"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RWv-2X-eec">
+                                                    <rect key="frame" x="80" y="22.5" width="270" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="RWv-2X-eec" firstAttribute="centerY" secondItem="JP5-eX-mq6" secondAttribute="centerY" id="1fa-UU-0Jr"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="RWv-2X-eec" secondAttribute="trailing" constant="10" id="1s1-ni-CbX"/>
+                                                <constraint firstItem="JP5-eX-mq6" firstAttribute="top" secondItem="Tsn-Tt-SNc" secondAttribute="top" constant="12" id="AWZ-oT-eh5"/>
+                                                <constraint firstItem="RWv-2X-eec" firstAttribute="leading" secondItem="JP5-eX-mq6" secondAttribute="trailing" constant="20" id="SN7-3G-8pI"/>
+                                                <constraint firstItem="JP5-eX-mq6" firstAttribute="leading" secondItem="Tsn-Tt-SNc" secondAttribute="leadingMargin" id="rSH-Et-QUN"/>
+                                                <constraint firstAttribute="bottom" secondItem="JP5-eX-mq6" secondAttribute="bottom" constant="12" id="vzU-ei-6F7"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="genreImageView" destination="JP5-eX-mq6" id="wee-xl-jJi"/>
+                                            <outlet property="genreLabel" destination="RWv-2X-eec" id="kf4-K4-cqF"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -324,10 +362,13 @@
                         <viewLayoutGuide key="safeArea" id="h3x-Vq-5gx"/>
                     </view>
                     <navigationItem key="navigationItem" title="Genres" id="sHl-hz-M0q"/>
+                    <connections>
+                        <outlet property="tableView" destination="h6b-yf-Sqo" id="tOw-cf-qVW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JNz-ix-X40" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3138" y="-224"/>
+            <point key="canvasLocation" x="3136.8000000000002" y="-224.4377811094453"/>
         </scene>
         <!-- -->
         <scene sceneID="T8R-Um-EuU">

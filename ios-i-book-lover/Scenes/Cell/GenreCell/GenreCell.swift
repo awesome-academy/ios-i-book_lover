@@ -11,15 +11,24 @@ import Then
 import Reusable
 
 final class GenreCell: UICollectionViewCell {
-    @IBOutlet weak var genreLabel: UILabel!
+    @IBOutlet private weak var genreLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        configCell()
+    }
+    
+    func setContent(genreTitle: String) {
+        genreLabel.text = genreTitle
+    }
+    
+    private func configCell() {
         genreLabel.do { _ in
             layer.masksToBounds = true
             layer.cornerRadius = 10
         }
     }
 }
-extension GenreCell: NibReusable {    
+
+extension GenreCell: Reusable {    
 }

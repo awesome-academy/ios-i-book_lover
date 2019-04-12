@@ -17,6 +17,7 @@ final class HomeViewController: UIViewController {
     @IBOutlet private weak var genreCollectionView: UICollectionView!
     @IBOutlet private weak var popularCollectionView: UICollectionView!
     @IBOutlet private weak var newCollectionView: UICollectionView!
+    
     private var genresList = [String]()
     private var popularBooksList = [Book]()
     private var newBooksList = [Book]()
@@ -53,10 +54,13 @@ final class HomeViewController: UIViewController {
     }
     
     private func fetchOwnGenres() {
+        genresList.removeAll()
+        
         guard let appDelegate =
             UIApplication.shared.delegate as? AppDelegate else {
                 return
         }
+        
         let managedContext = appDelegate.persistentContainer.viewContext
         let fetchRequest =
             NSFetchRequest<User>(entityName: "User")
@@ -67,6 +71,10 @@ final class HomeViewController: UIViewController {
                 for index in 0..<Constants.genres.count where list[counting] == index {
                     genresList.append(Constants.genres[index])
                     counting += 1
+                    
+                    if  list.count == counting {
+                        break
+                    }
                 }
             }
             genreCollectionView.reloadData()
@@ -169,6 +177,7 @@ final class HomeViewController: UIViewController {
     
     @IBAction private func moreGenreAction(_ sender: Any) {
         let vc = GenresListViewController.instantiate()
+        vc.genresList = genresList
         show(vc, sender: nil)
     }
     
@@ -190,7 +199,7 @@ extension HomeViewController: UICollectionViewDelegate {
             let vc = BooksListViewController.instantiate()
             show(vc, sender: nil)
         case popularCollectionView:
-            let vc = BookDetailViewController.instantiate()
+            let vc = BooksListViewController.instantiate()
             show(vc, sender: nil)
         default:
             let vc = BookDetailViewController.instantiate()
@@ -226,7 +235,7 @@ extension HomeViewController: UICollectionViewDataSource {
             return cell
         default:
             let cell = genreCollectionView.dequeueReusableCell(for: indexPath) as GenreCell
-            cell.genreLabel.text = genresList[indexPath.row]
+            cell.setContent(genreTitle: genresList[indexPath.row])
             return cell
         }
     }

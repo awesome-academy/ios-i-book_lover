@@ -16,6 +16,7 @@ final class WelcomeViewController: UIViewController {
     @IBOutlet private weak var collectionView: UICollectionView!
     @IBOutlet private weak var bottomView: UIView!
     @IBOutlet private weak var countingLabel: UILabel!
+    
     var genres = Constants.genres
     var genresCount = 0
     var selectedIndexGenres = [Int]()
@@ -35,7 +36,9 @@ final class WelcomeViewController: UIViewController {
             $0.addGestureRecognizer(tapGesture)
         }
         collectionView.do {
-            $0.register(cellType: WelcomeCell.self)
+            $0.delegate = self
+            $0.dataSource = self
+            $0.allowsMultipleSelection = true
         }
     }
     
@@ -101,7 +104,7 @@ extension WelcomeViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(for: indexPath) as WelcomeCell
-        cell.genreLabel.text = genres[indexPath.row]
+        cell.setContent(genreTitle: genres[indexPath.item])
         return cell
     }
 }
