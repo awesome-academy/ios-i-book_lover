@@ -13,7 +13,7 @@ pod 'XMLMapper'
 pod 'Reusable'
 pod 'XMLMapper/Requests'
 pod 'Kingfisher'
-
+pod 'XLPagerTabStrip', '~> 8.1.1'
   # Pods for BookLover
 
 end

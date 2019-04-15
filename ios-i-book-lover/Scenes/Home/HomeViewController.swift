@@ -56,11 +56,7 @@ final class HomeViewController: UIViewController {
     private func fetchOwnGenres() {
         genresList.removeAll()
         
-        guard let appDelegate =
-            UIApplication.shared.delegate as? AppDelegate else {
-                return
-        }
-        
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         let managedContext = appDelegate.persistentContainer.viewContext
         let fetchRequest =
             NSFetchRequest<User>(entityName: "User")
@@ -85,9 +81,7 @@ final class HomeViewController: UIViewController {
     
     private func fetchPopularBook(isbn: String) {
         bookRepository.searchBooks(isbn: isbn) { [weak self] (result) in
-            guard let self = self else {
-                return
-            }
+            guard let self = self else { return }
             
             switch result {
             case .success(let reponse):
@@ -105,9 +99,7 @@ final class HomeViewController: UIViewController {
     
     private func fetchNewBook(isbn: String) {
         bookRepository.searchBooks(isbn: isbn) { [weak self] (result) in
-            guard let self = self else {
-                return
-            }
+            guard let self = self else { return }
             
             switch result {
             case .success(let reponse):
@@ -126,9 +118,7 @@ final class HomeViewController: UIViewController {
     private func fetchIsbnPopularBook() {
         view.activityStartAnimating(activityColor: .mainColor)
         isbnRepository.searchIsbn(publishedDate: Date().getHalfYearAgo().toString()) { [weak self] (result) in
-            guard let self = self else {
-                return
-            }
+            guard let self = self else { return }
             
             switch result {
             case .success(let reponse):
@@ -152,9 +142,7 @@ final class HomeViewController: UIViewController {
     private func fetchIsbnNewBook() {
         view.activityStartAnimating(activityColor: .mainColor)
         isbnRepository.searchIsbn(publishedDate: Date().toString()) { [weak self] (result) in
-            guard let self = self else {
-                return
-            }
+            guard let self = self else { return }
             
             switch result {
             case .success(let reponse):
@@ -175,18 +163,18 @@ final class HomeViewController: UIViewController {
         }
     }
     
-    @IBAction private func moreGenreAction(_ sender: Any) {
+    @IBAction private func moreGenreAction(_ sender: UIButton) {
         let vc = GenresListViewController.instantiate()
         vc.genresList = genresList
         show(vc, sender: nil)
     }
     
-    @IBAction private func morePopularAction(_ sender: Any) {
+    @IBAction private func morePopularAction(_ sender: UIButton) {
         let vc = BooksListViewController.instantiate()
         show(vc, sender: nil)
     }
     
-    @IBAction private func moreNewAction(_ sender: Any) {
+    @IBAction private func moreNewAction(_ sender: UIButton) {
         let vc = BooksListViewController.instantiate()
         show(vc, sender: nil)
     }
@@ -199,10 +187,12 @@ extension HomeViewController: UICollectionViewDelegate {
             let vc = BooksListViewController.instantiate()
             show(vc, sender: nil)
         case popularCollectionView:
-            let vc = BooksListViewController.instantiate()
+            let vc = BookDetailViewController.instantiate()
+            vc.bookId = popularBooksList[indexPath.item].id?.text ?? ""
             show(vc, sender: nil)
         default:
             let vc = BookDetailViewController.instantiate()
+            vc.bookId = newBooksList[indexPath.item].id?.text ?? ""
             show(vc, sender: nil)
         }
     }
