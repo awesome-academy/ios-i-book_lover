@@ -23,20 +23,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="140" height="220"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tHq-U1-ggk">
-                                <rect key="frame" x="0.0" y="0.0" width="140" height="130"/>
+                                <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="130" id="PAp-rd-Qkh"/>
+                                    <constraint firstAttribute="height" constant="140" id="PAp-rd-Qkh"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JYH-a9-awk" customClass="RatingView" customModule="BookLover" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="135" width="140" height="20"/>
+                                <rect key="frame" x="0.0" y="145" width="140" height="20"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="Gez-bt-qwT"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fgn-3M-HIS">
-                                <rect key="frame" x="0.0" y="160" width="140" height="41.5"/>
+                                <rect key="frame" x="0.0" y="170" width="140" height="31.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

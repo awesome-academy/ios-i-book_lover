@@ -10,7 +10,7 @@ import UIKit
 import Then
 import Reusable
 
-final class WelcomeCell: UICollectionViewCell {
+final class WelcomeCell: UICollectionViewCell, Reusable {
     @IBOutlet private weak var genreLabel: UILabel!
     
     override func awakeFromNib() {
@@ -42,7 +42,4 @@ final class WelcomeCell: UICollectionViewCell {
             layer.borderWidth = 1
         }
     }
-}
-
-extension WelcomeCell: Reusable {    
 }

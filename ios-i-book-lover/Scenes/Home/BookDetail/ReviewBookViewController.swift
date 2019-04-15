@@ -20,7 +20,8 @@ final class ReviewBookViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()        
-        guard let url = URL(string: "\(Configuration.reviewUrl)&isbn=\(bookISBN)") else {
+        guard let url = URL(string: "\(Configuration.reviewUrl)&isbn=\(bookISBN)") else
+        {
             return
         }
         webView.do {

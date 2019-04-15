@@ -194,7 +194,7 @@
                                                 </constraints>
                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VjI-t6-m5P">
                                                     <size key="itemSize" width="129" height="192"/>
-                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key=" erReferenceSize" width="0.0" height="0.0"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
@@ -762,17 +762,61 @@
             </objects>
             <point key="canvasLocation" x="4109.6000000000004" y="-1433.433283358321"/>
         </scene>
-        <!--BookShelf-->
+        <!--Add to BookShelf-->
         <scene sceneID="2W7-Sf-nb6">
             <objects>
                 <viewController storyboardIdentifier="BookShelfViewController" id="vVo-9v-sde" customClass="BookShelfViewController" customModule="BookLover" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yHH-Fp-1On">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="G8D-Vb-Nkn">
+                                <rect key="frame" x="22" y="80" width="331" height="490"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jKI-fz-KEL">
+                                <rect key="frame" x="16" y="606" width="343" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="jRt-g4-7qv"/>
+                                </constraints>
+                                <state key="normal" title="Remove from bookshelf">
+                                    <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="removeBookAction:" destination="vVo-9v-sde" eventType="touchUpInside" id="tzx-y8-oqm"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jKI-fz-KEL" firstAttribute="top" secondItem="G8D-Vb-Nkn" secondAttribute="bottom" constant="36" id="4LC-IW-Dyl"/>
+                            <constraint firstItem="OdC-OZ-Vob" firstAttribute="trailing" secondItem="jKI-fz-KEL" secondAttribute="trailing" constant="16" id="A0L-OJ-BPL"/>
+                            <constraint firstItem="G8D-Vb-Nkn" firstAttribute="top" secondItem="OdC-OZ-Vob" secondAttribute="top" constant="16" id="MCC-CT-Ce8"/>
+                            <constraint firstItem="OdC-OZ-Vob" firstAttribute="bottom" secondItem="jKI-fz-KEL" secondAttribute="bottom" constant="16" id="bXg-le-OAV"/>
+                            <constraint firstItem="OdC-OZ-Vob" firstAttribute="trailing" secondItem="G8D-Vb-Nkn" secondAttribute="trailing" constant="22" id="bgR-Jk-boW"/>
+                            <constraint firstItem="jKI-fz-KEL" firstAttribute="leading" secondItem="OdC-OZ-Vob" secondAttribute="leading" constant="16" id="i55-xs-K5K"/>
+                            <constraint firstItem="G8D-Vb-Nkn" firstAttribute="leading" secondItem="OdC-OZ-Vob" secondAttribute="leading" constant="22" id="i8h-LO-qoY"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="OdC-OZ-Vob"/>
                     </view>
-                    <navigationItem key="navigationItem" title="BookShelf" id="AWh-rs-a8q"/>
+                    <navigationItem key="navigationItem" title="Add to BookShelf" id="AWh-rs-a8q">
+                        <barButtonItem key="leftBarButtonItem" title="cancel" id="CBf-VG-hFO">
+                            <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="cancelAction:" destination="vVo-9v-sde" id="tw0-BJ-tsS"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="COJ-ZV-gj4">
+                            <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="doneAction:" destination="vVo-9v-sde" id="1tz-YX-8TC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="removeButton" destination="jKI-fz-KEL" id="wxh-5r-L7E"/>
+                        <outlet property="tableView" destination="G8D-Vb-Nkn" id="ioN-3R-575"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OBQ-0b-e5v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -888,6 +932,9 @@
                         <viewLayoutGuide key="safeArea" id="me2-Kf-cPT"/>
                     </view>
                     <navigationItem key="navigationItem" title="Books" id="nYO-Jm-2k2"/>
+                    <connections>
+                        <outlet property="tableView" destination="KLg-gp-NTr" id="kIa-te-XAI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KPM-TN-PXF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

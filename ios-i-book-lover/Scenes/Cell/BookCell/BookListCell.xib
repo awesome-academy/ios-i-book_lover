@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookListCell" rowHeight="207" id="KGk-i7-Jjw" customClass="BookListCell" customModule="BookLover" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="344" height="207"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="344" height="206.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="b21-53-rhF">
+                        <rect key="frame" x="16" y="16" width="130" height="160"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="160" id="P6R-kG-p93"/>
+                            <constraint firstAttribute="width" constant="130" id="b2e-F8-by2"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rzf-uM-Gag">
+                        <rect key="frame" x="162" y="16" width="166" height="23"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KVe-48-NOA">
+                        <rect key="frame" x="162" y="55" width="150" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X8T-lU-OE5" customClass="RatingView" customModule="BookLover" customModuleProvider="target">
+                        <rect key="frame" x="162" y="89" width="100" height="38"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="38" id="2jK-gj-TiZ"/>
+                            <constraint firstAttribute="width" constant="100" id="Uif-cW-K4n"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="b21-53-rhF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="6eA-Zc-Veb"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="KVe-48-NOA" secondAttribute="trailing" constant="16" id="CIn-Yd-kXK"/>
+                    <constraint firstItem="X8T-lU-OE5" firstAttribute="leading" secondItem="KVe-48-NOA" secondAttribute="leading" id="F4R-Ki-D3H"/>
+                    <constraint firstItem="rzf-uM-Gag" firstAttribute="leading" secondItem="b21-53-rhF" secondAttribute="trailing" constant="16" id="Flf-b1-avZ"/>
+                    <constraint firstItem="b21-53-rhF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="Qxz-wp-rE0"/>
+                    <constraint firstAttribute="bottom" secondItem="b21-53-rhF" secondAttribute="bottom" constant="16" id="dWM-0u-epZ"/>
+                    <constraint firstItem="KVe-48-NOA" firstAttribute="top" secondItem="rzf-uM-Gag" secondAttribute="bottom" constant="16" id="lFR-an-m0k"/>
+                    <constraint firstAttribute="trailing" secondItem="rzf-uM-Gag" secondAttribute="trailing" constant="16" id="lZi-LL-iv5"/>
+                    <constraint firstItem="X8T-lU-OE5" firstAttribute="top" secondItem="KVe-48-NOA" secondAttribute="bottom" constant="16" id="rDn-AH-ytD"/>
+                    <constraint firstItem="rzf-uM-Gag" firstAttribute="top" secondItem="b21-53-rhF" secondAttribute="top" id="wUs-ee-Kew"/>
+                    <constraint firstItem="KVe-48-NOA" firstAttribute="leading" secondItem="b21-53-rhF" secondAttribute="trailing" constant="16" id="zz2-KT-yUF"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="authorLabel" destination="KVe-48-NOA" id="ibc-hb-1KV"/>
+                <outlet property="bookImageView" destination="b21-53-rhF" id="nh0-I6-VPj"/>
+                <outlet property="ratingView" destination="X8T-lU-OE5" id="hiX-Td-jgZ"/>
+                <outlet property="titleLabel" destination="rzf-uM-Gag" id="ZVs-0E-u3R"/>
+            </connections>
+            <point key="canvasLocation" x="59.200000000000003" y="120.08995502248877"/>
+        </tableViewCell>
+    </objects>
+</document>

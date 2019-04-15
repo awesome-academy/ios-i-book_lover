@@ -10,7 +10,7 @@ import UIKit
 import Then
 import Reusable
 
-final class GenreCell: UICollectionViewCell {
+final class GenreCell: UICollectionViewCell, Reusable {
     @IBOutlet private weak var genreLabel: UILabel!
     
     override func awakeFromNib() {
@@ -28,7 +28,4 @@ final class GenreCell: UICollectionViewCell {
             layer.cornerRadius = 10
         }
     }
-}
-
-extension GenreCell: Reusable {    
 }

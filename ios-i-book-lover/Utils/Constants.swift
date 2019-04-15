@@ -17,6 +17,8 @@ enum Constants {
                          "Romance", "Young-adult"]
     static let indicatorTag = 999
     static let preDisplayItems = 6
+    static let progresses = ["Interested to Read", "Currently Reading", "Read"]
+    static let defaultProgress = "Want to Read"
 }
 
 enum Cells {
@@ -39,3 +41,4 @@ enum IndicatorChild {
     static let review = "Review"
     static let about = "About"
 }
+

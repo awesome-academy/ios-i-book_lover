@@ -9,7 +9,7 @@
 import UIKit
 import Reusable
 
-final class GenreDisplayCell: UITableViewCell {
+final class GenreDisplayCell: UITableViewCell, Reusable {
     @IBOutlet private weak var genreImageView: UIImageView!
     @IBOutlet private weak var genreLabel: UILabel!
     
@@ -26,7 +26,4 @@ final class GenreDisplayCell: UITableViewCell {
     private func configCell() {
         selectionStyle = .none
     }
-}
-
-extension GenreDisplayCell: Reusable {
 }

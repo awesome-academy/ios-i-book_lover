@@ -11,6 +11,7 @@ import Reusable
 import XLPagerTabStrip
 import Then
 import Kingfisher
+import CoreData
 
 final class BookDetailViewController: ButtonBarPagerTabStripViewController {
     @IBOutlet private weak var bookImageView: UIImageView!
@@ -36,6 +37,7 @@ final class BookDetailViewController: ButtonBarPagerTabStripViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)        
         loadData()
+        setProgress(progress: -1)
     }
     
     private func prepareUI() {
@@ -51,6 +53,7 @@ final class BookDetailViewController: ButtonBarPagerTabStripViewController {
     @objc
     private func addToBookShelf() {
         let vc = BookShelfViewController.instantiate()
+        vc.bookId = bookId
         let navigation = UINavigationController(rootViewController: vc)
         present(navigation, animated: true, completion: nil)
     }
@@ -70,11 +73,52 @@ final class BookDetailViewController: ButtonBarPagerTabStripViewController {
                     $0.bookISBN = bookDetail.isbn
                     $0.setContent(book: bookDetail)
                     $0.reloadPagerTabStripView()
+                    $0.checkProgress(bookId: bookDetail.id)
                     $0.view.activityStopOverlay()
                 }
             case .failure(let error):
                 print(error ?? "")
             }
+        }
+    }
+    
+    private func checkProgress(bookId: String) {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let fetchBookRequest = NSFetchRequest<BookEntity>(entityName: "BookEntity")
+        do {
+            let book = try managedContext.fetch(fetchBookRequest)
+            for i in book where i.id == bookId {
+                setProgress(progress: Int(i.progress))
+            }
+        } catch {
+            print(error)
+        }
+    }
+    
+    private func setProgress(progress: Int) {
+        if progress != -1 {
+            wantToReadView.do {
+                $0.layer.backgroundColor = UIColor.white.cgColor
+                $0.layer.borderColor = UIColor.mainColor.cgColor
+                $0.layer.borderWidth = 1
+            }
+            wantToReadLabel.do {
+                $0.textColor = .mainColor
+                $0.text = Constants.progresses[progress]
+            }
+            wantToReadImageView.image = UIImage(named: "ic_down_2")
+        } else {
+            wantToReadLabel.do {
+                $0.text = Constants.defaultProgress
+                $0.textColor = .white
+            }
+            wantToReadView.do {
+                $0.layer.backgroundColor = UIColor.mainColor.cgColor
+                $0.layer.borderColor = UIColor.white.cgColor
+                $0.layer.borderWidth = 1
+            }
+            wantToReadImageView.image = UIImage(named: "ic_down")
         }
     }
     
