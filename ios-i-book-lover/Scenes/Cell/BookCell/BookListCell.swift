@@ -22,8 +22,7 @@ final class BookListCell: UITableViewCell, NibReusable {
     
     func setContent(book: Book) {
         guard let author = book.author,
-            let url = URL(string: book.imageUrl) else
-        {
+            let url = URL(string: book.imageUrl) else {
             return
         }
         authorLabel.text = author.name

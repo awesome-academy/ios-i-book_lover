@@ -48,6 +48,15 @@
 		979AF9A3226497CC001E8947 /* ProgressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 979AF9A1226497CC001E8947 /* ProgressCell.xib */; };
 		979AF9A4226497CC001E8947 /* ProgressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979AF9A2226497CC001E8947 /* ProgressCell.swift */; };
 		979AF9AA22658076001E8947 /* BookShelfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979AF9A922658076001E8947 /* BookShelfViewController.swift */; };
+		979AF9AD2265CE53001E8947 /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979AF9AC2265CE53001E8947 /* PageCell.swift */; };
+		979AF9AF2265D407001E8947 /* SearchAllBooksRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979AF9AE2265D407001E8947 /* SearchAllBooksRequest.swift */; };
+		979AF9B52266C408001E8947 /* KeyWordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 979AF9B32266C408001E8947 /* KeyWordCell.xib */; };
+		979AF9B62266C408001E8947 /* KeyWordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979AF9B42266C408001E8947 /* KeyWordCell.swift */; };
+		979AF9BC2266E5FA001E8947 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 979AF9BA2266E5FA001E8947 /* CategoryCell.xib */; };
+		979AF9BD2266E5FA001E8947 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979AF9BB2266E5FA001E8947 /* CategoryCell.swift */; };
+		979AF9BF226709DC001E8947 /* EditGernesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979AF9BE226709DC001E8947 /* EditGernesViewController.swift */; };
+		979AF9C122670A07001E8947 /* BookShelfCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979AF9C022670A07001E8947 /* BookShelfCategoryViewController.swift */; };
+		979B715A22682FFF00D29F48 /* ProfileViewController+CollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979B715922682FFF00D29F48 /* ProfileViewController+CollectionViewExtension.swift */; };
 		97CD7620225EF410005D3102 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CD761F225EF410005D3102 /* Date+Extension.swift */; };
 		97CD7625225F2E37005D3102 /* ISBNList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CD7624225F2E37005D3102 /* ISBNList.swift */; };
 		97CD762F225F87EB005D3102 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CD762E225F87EB005D3102 /* APIService.swift */; };
@@ -124,6 +133,15 @@
 		979AF9A1226497CC001E8947 /* ProgressCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgressCell.xib; sourceTree = "<group>"; };
 		979AF9A2226497CC001E8947 /* ProgressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCell.swift; sourceTree = "<group>"; };
 		979AF9A922658076001E8947 /* BookShelfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookShelfViewController.swift; sourceTree = "<group>"; };
+		979AF9AC2265CE53001E8947 /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
+		979AF9AE2265D407001E8947 /* SearchAllBooksRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAllBooksRequest.swift; sourceTree = "<group>"; };
+		979AF9B32266C408001E8947 /* KeyWordCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeyWordCell.xib; sourceTree = "<group>"; };
+		979AF9B42266C408001E8947 /* KeyWordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyWordCell.swift; sourceTree = "<group>"; };
+		979AF9BA2266E5FA001E8947 /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
+		979AF9BB2266E5FA001E8947 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		979AF9BE226709DC001E8947 /* EditGernesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditGernesViewController.swift; sourceTree = "<group>"; };
+		979AF9C022670A07001E8947 /* BookShelfCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookShelfCategoryViewController.swift; sourceTree = "<group>"; };
+		979B715922682FFF00D29F48 /* ProfileViewController+CollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileViewController+CollectionViewExtension.swift"; sourceTree = "<group>"; };
 		97CD761F225EF410005D3102 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		97CD7624225F2E37005D3102 /* ISBNList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISBNList.swift; sourceTree = "<group>"; };
 		97CD762E225F87EB005D3102 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
@@ -306,6 +324,9 @@
 			isa = PBXGroup;
 			children = (
 				976C5F5C2255B64200104CDA /* ProfileViewController.swift */,
+				979AF9BE226709DC001E8947 /* EditGernesViewController.swift */,
+				979AF9C022670A07001E8947 /* BookShelfCategoryViewController.swift */,
+				979B715922682FFF00D29F48 /* ProfileViewController+CollectionViewExtension.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -376,6 +397,9 @@
 		976C5F8E225A10AC00104CDA /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				979AF9B72266E5AB001E8947 /* CategoryCell */,
+				979AF9B02266C3B5001E8947 /* KeyWordCell */,
+				979AF9AB2265CE3C001E8947 /* PageCell */,
 				979AF9A0226497A4001E8947 /* ProgressCell */,
 				976C5FB6225BA2CD00104CDA /* GenreCell */,
 				976C5FB1225B9B8600104CDA /* BookCell */,
@@ -429,6 +453,32 @@
 				979AF9A2226497CC001E8947 /* ProgressCell.swift */,
 			);
 			path = ProgressCell;
+			sourceTree = "<group>";
+		};
+		979AF9AB2265CE3C001E8947 /* PageCell */ = {
+			isa = PBXGroup;
+			children = (
+				979AF9AC2265CE53001E8947 /* PageCell.swift */,
+			);
+			path = PageCell;
+			sourceTree = "<group>";
+		};
+		979AF9B02266C3B5001E8947 /* KeyWordCell */ = {
+			isa = PBXGroup;
+			children = (
+				979AF9B32266C408001E8947 /* KeyWordCell.xib */,
+				979AF9B42266C408001E8947 /* KeyWordCell.swift */,
+			);
+			path = KeyWordCell;
+			sourceTree = "<group>";
+		};
+		979AF9B72266E5AB001E8947 /* CategoryCell */ = {
+			isa = PBXGroup;
+			children = (
+				979AF9BA2266E5FA001E8947 /* CategoryCell.xib */,
+				979AF9BB2266E5FA001E8947 /* CategoryCell.swift */,
+			);
+			path = CategoryCell;
 			sourceTree = "<group>";
 		};
 		97CD760A225DE444005D3102 /* Repository */ = {
@@ -506,6 +556,7 @@
 				97CD76672260F461005D3102 /* BookDetailRequest.swift */,
 				97CD76712261DE47005D3102 /* SimiliarBookRequest.swift */,
 				979AF99C22648F8D001E8947 /* SearchBookByGenreRequest.swift */,
+				979AF9AE2265D407001E8947 /* SearchAllBooksRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -613,9 +664,11 @@
 				976C5FB4225B9BB600104CDA /* BookCell.xib in Resources */,
 				979AF9A3226497CC001E8947 /* ProgressCell.xib in Resources */,
 				976C5F1E22549C6200104CDA /* LaunchScreen.storyboard in Resources */,
+				979AF9B52266C408001E8947 /* KeyWordCell.xib in Resources */,
 				979AF99A2264891F001E8947 /* BookListCell.xib in Resources */,
 				976C5F1B22549C6200104CDA /* Assets.xcassets in Resources */,
 				976C5F562255B5E900104CDA /* Explore.storyboard in Resources */,
+				979AF9BC2266E5FA001E8947 /* CategoryCell.xib in Resources */,
 				976C5F1622549C6100104CDA /* Main.storyboard in Resources */,
 				976C5FB0225B98EC00104CDA /* RatingView.xib in Resources */,
 				976C5F582255B5E900104CDA /* Profile.storyboard in Resources */,
@@ -710,6 +763,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				979B715A22682FFF00D29F48 /* ProfileViewController+CollectionViewExtension.swift in Sources */,
 				97CD763F225F8AAC005D3102 /* BaseRequest.swift in Sources */,
 				97CD76682260F461005D3102 /* BookDetailRequest.swift in Sources */,
 				97CD762F225F87EB005D3102 /* APIService.swift in Sources */,
@@ -725,6 +779,7 @@
 				976C5F5F2255B66500104CDA /* HomeViewController.swift in Sources */,
 				97CD764D225F98E1005D3102 /* SearchIsbnRequest.swift in Sources */,
 				976C5F352254A14500104CDA /* Storyboards.swift in Sources */,
+				979AF9AD2265CE53001E8947 /* PageCell.swift in Sources */,
 				976C5F612255B67000104CDA /* ExploreViewController.swift in Sources */,
 				976C5F6D2256F52F00104CDA /* DetailAuthor.swift in Sources */,
 				9790585F225CCD090077A826 /* BooksListViewController.swift in Sources */,
@@ -744,14 +799,18 @@
 				976C5F97225A42D900104CDA /* UIView+Extension.swift in Sources */,
 				976C5FB5225B9BB600104CDA /* BookCell.swift in Sources */,
 				97CD765522602690005D3102 /* ISBN.swift in Sources */,
+				979AF9BD2266E5FA001E8947 /* CategoryCell.swift in Sources */,
 				979AF9A4226497CC001E8947 /* ProgressCell.swift in Sources */,
 				979AF99D22648F8D001E8947 /* SearchBookByGenreRequest.swift in Sources */,
 				97CD764F225F9940005D3102 /* IsbnRepository.swift in Sources */,
 				97CD76642260C605005D3102 /* AboutBookViewController.swift in Sources */,
 				976C5F862259D93C00104CDA /* Text.swift in Sources */,
+				979AF9AF2265D407001E8947 /* SearchAllBooksRequest.swift in Sources */,
+				979AF9BF226709DC001E8947 /* EditGernesViewController.swift in Sources */,
 				976C5F7E22573EE100104CDA /* BookLover.xcdatamodeld in Sources */,
 				97CD7645225F8E53005D3102 /* BookRepository.swift in Sources */,
 				976C5F91225A190700104CDA /* WelcomeCell.swift in Sources */,
+				979AF9B62266C408001E8947 /* KeyWordCell.swift in Sources */,
 				976C5F5D2255B64200104CDA /* ProfileViewController.swift in Sources */,
 				976C5F9B225A506500104CDA /* UIViewController+Extension.swift in Sources */,
 				97CD766A2260F473005D3102 /* BookDetailResponse.swift in Sources */,
@@ -763,6 +822,7 @@
 				97565297225DB5F600748B5A /* TabBarController.swift in Sources */,
 				97CD76762261DF19005D3102 /* SimiliarBookRepository.swift in Sources */,
 				976C5F1122549C6100104CDA /* AppDelegate.swift in Sources */,
+				979AF9C122670A07001E8947 /* BookShelfCategoryViewController.swift in Sources */,
 				97CD765722602C32005D3102 /* UIFont+Extension.swift in Sources */,
 				97CD765B22604B7C005D3102 /* GenreDisplayCell.swift in Sources */,
 				976C5F692255C36700104CDA /* Constants.swift in Sources */,

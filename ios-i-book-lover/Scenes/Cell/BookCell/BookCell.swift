@@ -24,8 +24,7 @@ final class BookCell: UICollectionViewCell, NibReusable {
     func configCell(book: Book?) {
         guard let book = book,
             let author = book.author,
-            let url = URL(string: book.imageUrl) else
-        {
+            let url = URL(string: book.imageUrl) else {
             return
         }
         authorLabel.text = author.name
