@@ -13,7 +13,9 @@ final class DetailAuthor: XMLMappable {
     var id = ""
     var name = ""
     var link = ""
-    var imageURL = ""
+    var imageURL: Text?
+    var averageRating = ""
+    var ratingCount = ""
     
     required init?(map: XMLMap) {
     }
@@ -23,5 +25,7 @@ final class DetailAuthor: XMLMappable {
         name <- map["name"]
         link <- map["link"]
         imageURL <- map["image_url"]
+        averageRating <- map["average_rating"]
+        ratingCount <- map["ratings_count"]
     }
 }

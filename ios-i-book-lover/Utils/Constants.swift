@@ -34,3 +34,8 @@ enum Genres {
                               "ic_nonfiction", "ic_psychology", "ic_science", "ic_self_help", "ic_travel",
                               "ic_romantic", "ic_young"]
 }
+
+enum IndicatorChild {
+    static let review = "Review"
+    static let about = "About"
+}

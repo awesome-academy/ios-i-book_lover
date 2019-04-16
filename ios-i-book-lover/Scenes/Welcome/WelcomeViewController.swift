@@ -48,13 +48,9 @@ final class WelcomeViewController: UIViewController {
     }
     
     private func save(ownGenres: [Int]) {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-                return
-        }
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         let managedContext = appDelegate.persistentContainer.viewContext
-        guard let entity = NSEntityDescription.entity(forEntityName: "User", in: managedContext) else {
-                return
-        }
+        guard let entity = NSEntityDescription.entity(forEntityName: "User", in: managedContext) else { return }
         let user = NSManagedObject(entity: entity, insertInto: managedContext)
         user.setValue(ownGenres, forKey: "genres")
         do {

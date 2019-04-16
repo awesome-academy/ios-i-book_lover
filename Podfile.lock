@@ -13,6 +13,7 @@ PODS:
   - SwiftLint (0.31.0)
   - SWXMLHash (4.7.6)
   - Then (2.4.0)
+  - XLPagerTabStrip (8.1.1)
   - XMLMapper (1.5.2):
     - XMLMapper/Core (= 1.5.2)
   - XMLMapper/Core (1.5.2)
@@ -28,6 +29,7 @@ DEPENDENCIES:
   - SwiftLint
   - SWXMLHash (~> 4.7.0)
   - Then
+  - XLPagerTabStrip (~> 8.1.1)
   - XMLMapper
   - XMLMapper/Requests
 
@@ -41,6 +43,7 @@ SPEC REPOS:
     - SwiftLint
     - SWXMLHash
     - Then
+    - XLPagerTabStrip
     - XMLMapper
 
 SPEC CHECKSUMS:
@@ -52,8 +55,9 @@ SPEC CHECKSUMS:
   SwiftLint: 7a0227733d786395817373b2d0ca799fd0093ff3
   SWXMLHash: f6e0933ce74f2626669dc544851bc9fc1941670d
   Then: 71866660c7af35a7343831f7668e7cd2b62ee0f2
+  XLPagerTabStrip: 63166e21c9844fa30f2d95d30f335e73be5caf22
   XMLMapper: e562e26d47ebc9a48370b97b4fd1b03c51148cb6
 
-PODFILE CHECKSUM: 66aefb3316b7c40ccaa6208e3a66326b3caada83
+PODFILE CHECKSUM: ca5f6c93953e30afa4af9360248487cc461007c7
 
 COCOAPODS: 1.6.1

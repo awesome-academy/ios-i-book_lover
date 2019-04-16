@@ -20,7 +20,7 @@ final class WelcomeCell: UICollectionViewCell {
     
     override var isSelected: Bool {
         didSet {
-            if self.isSelected {
+            if isSelected {
                 genreLabel.backgroundColor = .mainColor
                 genreLabel.textColor = .white
             } else {
