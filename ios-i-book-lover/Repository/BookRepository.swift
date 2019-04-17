@@ -8,6 +8,7 @@
 
 protocol BookRepository {
     func searchBooks(isbn: String, completion: @escaping (BaseResult<SearchBookResponse>) -> Void)
+    func searchBooksByGenre(genre: String, completion: @escaping (BaseResult<SearchBookResponse>) -> Void)
 }
 
 final class BookRepositoryImpl: BookRepository {
@@ -19,6 +20,20 @@ final class BookRepositoryImpl: BookRepository {
     
     func searchBooks(isbn: String, completion: @escaping (BaseResult<SearchBookResponse>) -> Void) {
         let input = SearchBookRequest(isbn: isbn)
+        
+        api?.requestXML(input: input) { (object: SearchBookResponse?, error) in
+            if let object = object {
+                completion(.success(object))
+            } else if let error = error {
+                completion(.failure(error: error))
+            } else {
+                completion(.failure(error: nil))
+            }
+        }
+    }
+    
+    func searchBooksByGenre(genre: String, completion: @escaping (BaseResult<SearchBookResponse>) -> Void) {
+        let input = SearchBookByGenreRequest(genre: genre)
         
         api?.requestXML(input: input) { (object: SearchBookResponse?, error) in
             if let object = object {

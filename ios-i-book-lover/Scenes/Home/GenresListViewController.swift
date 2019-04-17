@@ -64,6 +64,10 @@ final class GenresListViewController: UIViewController {
 extension GenresListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = BooksListViewController.instantiate()
+        vc.do {
+            $0.genre = genresList[indexPath.row]
+            $0.isGenresList = true
+        }        
         show(vc, sender: nil)
     }
 }

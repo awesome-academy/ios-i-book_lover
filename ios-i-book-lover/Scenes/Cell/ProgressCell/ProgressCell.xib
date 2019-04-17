@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ProgressCell" rowHeight="64" id="KGk-i7-Jjw" customClass="ProgressCell" customModule="BookLover" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="63.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="progress" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOf-xS-eqa">
+                        <rect key="frame" x="0.0" y="10" width="272" height="43.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ytF-FT-qVi">
+                        <rect key="frame" x="280" y="12" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="FUI-zO-SNz"/>
+                            <constraint firstAttribute="height" constant="40" id="tzn-QV-j8E"/>
+                        </constraints>
+                        <state key="normal" title=" " image="ic_unchecked"/>
+                        <state key="selected" image="ic_checked"/>
+                        <connections>
+                            <action selector="selectAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="scq-6d-fel"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="cOf-xS-eqa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="4zC-dF-GdZ"/>
+                    <constraint firstAttribute="trailing" secondItem="ytF-FT-qVi" secondAttribute="trailing" id="GBk-ky-0gk"/>
+                    <constraint firstItem="ytF-FT-qVi" firstAttribute="leading" secondItem="cOf-xS-eqa" secondAttribute="trailing" constant="8" id="j8i-mj-ln1"/>
+                    <constraint firstItem="cOf-xS-eqa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="lUJ-VZ-2pg"/>
+                    <constraint firstItem="ytF-FT-qVi" firstAttribute="centerY" secondItem="cOf-xS-eqa" secondAttribute="centerY" id="lpM-oD-5GT"/>
+                    <constraint firstAttribute="bottom" secondItem="cOf-xS-eqa" secondAttribute="bottom" constant="10" id="uaK-GM-3A5"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="progressLabel" destination="cOf-xS-eqa" id="dy9-ex-WIn"/>
+                <outlet property="radioButton" destination="ytF-FT-qVi" id="FP3-7N-Qdo"/>
+            </connections>
+            <point key="canvasLocation" x="129.59999999999999" y="68.365817091454275"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_checked" width="32" height="32"/>
+        <image name="ic_unchecked" width="32" height="32"/>
+    </resources>
+</document>

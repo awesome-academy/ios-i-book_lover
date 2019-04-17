@@ -171,11 +171,13 @@ final class HomeViewController: UIViewController {
     
     @IBAction private func morePopularAction(_ sender: UIButton) {
         let vc = BooksListViewController.instantiate()
+        vc.bookList = popularBooksList
         show(vc, sender: nil)
     }
     
     @IBAction private func moreNewAction(_ sender: UIButton) {
         let vc = BooksListViewController.instantiate()
+        vc.bookList = newBooksList
         show(vc, sender: nil)
     }
 }
