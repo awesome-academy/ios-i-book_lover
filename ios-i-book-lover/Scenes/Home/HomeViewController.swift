@@ -29,8 +29,8 @@ final class HomeViewController: UIViewController {
             prepareUI()
     }
 
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         fetchOwnGenres()
         fetchIsbnPopularBook()
         fetchIsbnNewBook()

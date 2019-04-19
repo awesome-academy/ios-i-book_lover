@@ -1,22 +1,16 @@
 //
-//  WelcomeCell.swift
+//  GenreEditCell.swift
 //  BookLover
 //
-//  Created by nguyen.nam.khanh on 4/7/19.
+//  Created by nguyen.nam.khanh on 4/19/19.
 //  Copyright © 2019 nguyen.nam.khanh. All rights reserved.
 //
 
 import UIKit
-import Then
 import Reusable
 
-final class WelcomeCell: UICollectionViewCell, Reusable {
+final class GenreEditCell: UICollectionViewCell, Reusable {
     @IBOutlet private weak var genreLabel: UILabel!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        configCell()
-    }
     
     override var isSelected: Bool {
         didSet {
@@ -25,6 +19,11 @@ final class WelcomeCell: UICollectionViewCell, Reusable {
                 $0.textColor = isSelected ? .white : .mainColor
             }
         }
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        configCell()
     }
     
     func setContent(genreTitle: String) {
@@ -38,4 +37,5 @@ final class WelcomeCell: UICollectionViewCell, Reusable {
             $0.layer.borderColor = UIColor.mainColor.cgColor
             $0.layer.borderWidth = 1
         }
-    }}
+    }
+}
