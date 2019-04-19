@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Reusable
 
 extension ProfileViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -14,10 +15,12 @@ extension ProfileViewController: UICollectionViewDelegate {
             switch indexPath.item {
             case 0, 1, 2:
                 let vc = BookShelfCategoryViewController.instantiate()
+                vc.categoryProgress = indexPath.item
                 show(vc, sender: nil)
             case 3:
                 let vc = EditGernesViewController.instantiate()
-                show(vc, sender: nil)
+                let navigation = UINavigationController(rootViewController: vc)
+                present(navigation, animated: true, completion: nil)
             default:
                 break
             }
@@ -63,4 +66,8 @@ extension ProfileViewController: UICollectionViewDelegateFlowLayout {
         }
         return CGSize(width: Cells.widthBookCell, height: Cells.heightBookCell)
     }
+}
+
+extension ProfileViewController: StoryboardSceneBased {
+    static let sceneStoryboard = Storyboards.profile
 }

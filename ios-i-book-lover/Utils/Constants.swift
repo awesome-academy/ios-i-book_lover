@@ -19,7 +19,6 @@ enum Constants {
     static let preDisplayItems = 6
     static let progresses = ["Interested to Read", "Currently Reading", "Read"]
     static let defaultProgress = "Want to Read"
-    static let pages = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
     static let bookCategories = ["Books", "Currently Reading", "Read", "Genres"]
     static let radiusCircle = 80
     static let widthExploreCollectionView: CGFloat = 20

@@ -23,7 +23,7 @@ extension UIViewController {
                    actionHandler: ((UIAlertAction) -> Void)? = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: cancelTitle, style: .cancel, handler: cancelHandler))
-        if actionHandler != nil {
+        if adjustHandler != nil {
             alert.addAction(UIAlertAction(title: adjustTitle, style: .default, handler: adjustHandler))
         }
         alert.addAction(UIAlertAction(title: actionTitle, style: .default, handler: actionHandler))

@@ -20,7 +20,7 @@ final class ProfileViewController: UIViewController {
     @IBOutlet private weak var trackingGoalLabel: UILabel!
     
     private let bookRepository: BookRepository = BookRepositoryImpl(api: APIService.share)
-    private var readingISBNList = [String]()
+    var readingISBNList = [String]()
     private let shapeLayer = CAShapeLayer()
     private var userGoal = 0
     private var userProgress = 0
@@ -36,8 +36,8 @@ final class ProfileViewController: UIViewController {
         configGoalCircle()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         fetchCategories()
         configTrackingGoal()
     }
@@ -244,8 +244,9 @@ final class ProfileViewController: UIViewController {
         }
         shapeLayer.add(animation, forKey: "animation")
     }
-}
-
-extension ProfileViewController: StoryboardSceneBased {
-    static let sceneStoryboard = Storyboards.profile
+    
+    @IBAction private func settingAction(_ sender: UIBarButtonItem) {
+        let vc = SettingViewController.instantiate()        
+        show(vc, sender: nil)
+    }
 }
