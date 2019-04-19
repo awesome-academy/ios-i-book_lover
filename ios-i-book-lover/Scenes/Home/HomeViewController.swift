@@ -244,7 +244,7 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
             width = title.width(withConstrainedHeight: height, font: UIFont.primary) + height / 2
         case popularCollectionView, newCollectionView:
             height = Cells.heightBookCell
-            width = Cells.weightBookCell
+            width = Cells.widthBookCell
         default:
             break
         }

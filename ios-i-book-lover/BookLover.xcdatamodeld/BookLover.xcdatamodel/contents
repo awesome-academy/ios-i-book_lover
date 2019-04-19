@@ -2,6 +2,7 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="17G65" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="BookEntity" representedClassName="BookEntity" syncable="YES" codeGenerationType="class">
         <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isbn" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="progress" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="bookShelf" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="books" inverseEntity="User" syncable="YES"/>
     </entity>
@@ -10,7 +11,7 @@
         <relationship name="books" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BookEntity" inverseName="bookShelf" inverseEntity="BookEntity" syncable="YES"/>
     </entity>
     <elements>
-        <element name="BookEntity" positionX="-131.4140625" positionY="392.625" width="128" height="90"/>
+        <element name="BookEntity" positionX="-131.4140625" positionY="392.625" width="128" height="105"/>
         <element name="User" positionX="49.05859375" positionY="240.6484375" width="128" height="75"/>
     </elements>
 </model>

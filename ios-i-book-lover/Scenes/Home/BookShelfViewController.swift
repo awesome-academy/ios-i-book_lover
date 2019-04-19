@@ -18,6 +18,7 @@ final class BookShelfViewController: UIViewController {
     private var selectedItem = -1
     private var isUpdatable = false
     var bookId = ""
+    var bookISBN = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,6 +76,7 @@ final class BookShelfViewController: UIViewController {
         guard let entity = NSEntityDescription.entity(forEntityName: "BookEntity", in: managedContext) else { return }
         let book = NSManagedObject(entity: entity, insertInto: managedContext).then {
             $0.setValue(bookId, forKey: "id")
+            $0.setValue(bookISBN, forKey: "isbn")
             $0.setValue(Int16(selectedItem), forKey: "progress")
         }
         let fetchRequest = NSFetchRequest<User>(entityName: "User")
@@ -184,8 +186,7 @@ extension BookShelfViewController: ProgressCellDelegate {
         for i in indexPaths {
             if i.row != indexPath.row && i.section == indexPath.section {
                 guard let cell = tableView.cellForRow(at: IndexPath(row: i.row, section: i.section))
-                    as? ProgressCell else
-                {
+                    as? ProgressCell else {
                     return
                 }
                 cell.selectButton(isSelected: false)

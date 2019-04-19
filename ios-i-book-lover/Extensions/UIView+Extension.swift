@@ -22,8 +22,7 @@ extension UIView {
         let typeOfSelf = type(of: self)
         let bundle = Bundle(for: typeOfSelf)
         let nib = UINib(nibName: String(describing: typeOfSelf), bundle: bundle)
-        guard let mNib = nib.instantiate(withOwner: self, options: nil).first as? UIView else
-        {
+        guard let mNib = nib.instantiate(withOwner: self, options: nil).first as? UIView else {
             return UIView()
         }
         return mNib

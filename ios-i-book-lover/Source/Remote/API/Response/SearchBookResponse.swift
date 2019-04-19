@@ -11,6 +11,7 @@ import XMLMapper
 final class SearchBookResponse: XMLMappable {
     var nodeName: String!
     var books: [Book]?
+    var totalResults = ""
     
     required init(map: XMLMap) {
         mapping(map: map)
@@ -18,5 +19,6 @@ final class SearchBookResponse: XMLMappable {
     
     func mapping(map: XMLMap) {
         books <- map["search.results.work"]
+        totalResults <- map["search.total-results"]
     }
 }

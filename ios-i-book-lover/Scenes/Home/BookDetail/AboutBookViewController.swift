@@ -130,7 +130,7 @@ extension AboutBookViewController: UICollectionViewDataSource {
 
 extension AboutBookViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: Cells.weightBookCell, height: Cells.heightBookCell)
+        return CGSize(width: Cells.widthBookCell, height: Cells.heightBookCell)
     }
 }
 

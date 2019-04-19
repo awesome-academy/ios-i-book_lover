@@ -53,7 +53,10 @@ final class BookDetailViewController: ButtonBarPagerTabStripViewController {
     @objc
     private func addToBookShelf() {
         let vc = BookShelfViewController.instantiate()
-        vc.bookId = bookId
+        vc.do {
+            $0.bookId = bookId
+            $0.bookISBN = bookISBN
+        }
         let navigation = UINavigationController(rootViewController: vc)
         present(navigation, animated: true, completion: nil)
     }
